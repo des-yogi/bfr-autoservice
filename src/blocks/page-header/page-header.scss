@@ -3,6 +3,16 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-header {
+  height: 568px;
+  background-color: $bg-dark;
+
+  @media (min-width: $screen-md) {
+    height: 580px;
+  }
+
+  @media (min-width: $screen-xl) {
+    height: 600px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 }

@@ -30,9 +30,20 @@
     "tabs": [],
     "object-fit-polyfill": [],
     "embed-responsive": [],
-    "scroll-link": []
+    "scroll-link": [],
+    "top-nav": [],
+    "socials": [],
+    "services-block": [],
+    "services-tuning": [],
+    "blog-last": [],
+    "gallery-last": [],
+    "about-block": [],
+    "contact-block": [],
+    "copyrights": [],
+    "main-action": []
   },
   "addCssBefore": [
+    "../../node_modules/normalize.css/normalize.css",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
@@ -41,9 +52,7 @@
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-    "./src/scss/blocks-library.scss"
-  ],
+  "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/jquery-migrate/dist/jquery-migrate.min.js",
