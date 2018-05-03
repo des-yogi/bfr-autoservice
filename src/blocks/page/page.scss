@@ -92,8 +92,6 @@ img {
 }
 
 .container {
- background-color: $gray-lightest;
-
   @include container (
     $xs-grid-gutter: $grid-gutter-width,
     $sm-grid-gutter: $grid-gutter-width,
