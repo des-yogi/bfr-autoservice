@@ -10,6 +10,7 @@ $gray-light:                  hsl(0, 0%, 60%);
 $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
+$gray-superlight:              hsl(0, 0%, 95%);
 $white:                       hsl(0, 0%, 100%);
 
 // Семантические цвета
@@ -36,19 +37,14 @@ $border-light:                $gray-lightest;
 // Базовая типографика
 
 $font-size:                   14px;
-$font-size--h1:               2.25em;
-$font-size--h2:               1.875em;
-$font-size--h3:               1.5em;
-$font-size--h4:               1.25em;
-$font-size--h5:               1em;
-$font-size--h6:               1em;
 $font-size--small:            0.75em;
 
 $line-height:                 1.35em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Montserrat', 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-
+$font-family:                 'Montserrat', sans-serif;
 $font-family--headings:       $font-family;
+$font-family--second:         'PT Sans', sans-serif;
+
 
 
 

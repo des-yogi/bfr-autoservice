@@ -48,11 +48,27 @@
     align-items: flex-start;
     margin-bottom: 30px;
 
-    svg {
-      width: 130px;
-      height: 56px;
-      fill: $white;
+    .logo {
+      color: $white;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 130px;
+        height: 56px;
+        fill: currentColor;
+
+        @media (min-width: $screen-md) {
+          width: 155px;
+          height: 66px;
+        }
+      }
+
+      &:hover,
+      &:active {
+        color: $main-color;
+      }
     }
+
   }
 
   &__body-bottom {

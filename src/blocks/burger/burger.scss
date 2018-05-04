@@ -22,6 +22,35 @@
   cursor: pointer;
 }
 
+.hamburger.is-active {
+  .line {
+    background-color: $main-color;
+  }
+}
+
+#hamburger-6.is-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.5s;
+  transform: rotate(45deg);
+}
+
+#hamburger-6.is-active .line:nth-child(2){
+  width: 0px;
+}
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+#hamburger-6.is-active .line:nth-child(1){
+  transform: translateY(12px);
+}
+
+#hamburger-6.is-active .line:nth-child(3){
+  transform: translateY(-10px) rotate(90deg);
+}
+
 /* ONE
 
 #hamburger-1.is-active .line:nth-child(2){
@@ -111,28 +140,7 @@ FIVE
 
 /* SIX */
 
-#hamburger-6.is-active{
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.5s;
-  transform: rotate(45deg);
-}
 
-#hamburger-6.is-active .line:nth-child(2){
-  width: 0px;
-}
-
-#hamburger-6.is-active .line:nth-child(1),
-#hamburger-6.is-active .line:nth-child(3){
-  transition-delay: 0.3s;
-}
-
-#hamburger-6.is-active .line:nth-child(1){
-  transform: translateY(12px);
-}
-
-#hamburger-6.is-active .line:nth-child(3){
-  transform: translateY(-10px) rotate(90deg);
-}
 
 /* SEVEN
 

@@ -25,8 +25,12 @@
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: right;
+    color: inherit;
 
-    &::after {
+    @include dubble-line();
+
+    /* &::after {
       position: absolute;
       bottom: -25px;
       left: 100%;
@@ -36,7 +40,7 @@
       height: 14px;
       background: url(../img/dubble-line.svg) no-repeat center center;
       background-size: cover;
-    }
+    }*/
   }
 
   &__para {

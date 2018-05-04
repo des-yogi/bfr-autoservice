@@ -91,6 +91,21 @@ img {
   height: auto;
 }
 
+main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+}
+
 .container {
   @include container (
     $xs-grid-gutter: $grid-gutter-width,
@@ -212,5 +227,34 @@ textarea {
   }
   &:after {
     clear: both;
+  }
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.owl-prev,
+.owl-next {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  font-size: 50px !important;
+  border: 2px solid $gray-superlight !important;
+
+  span {
+    display: block;
+    width: 30px !important;
+    height: 23px !important;
+    margin: auto;
+    color: $title-color;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $main-color !important;
+    outline: none;
   }
 }

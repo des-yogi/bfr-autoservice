@@ -7,18 +7,11 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 
 $font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family--headings:       $font-family !default;
-$font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size:                   14px !default;
-$font-size--h1:               2.25em !default;
-$font-size--h2:               1.875em !default;
-$font-size--h3:               1.5em !default;
-$font-size--h4:               1.25em !default;
-$font-size--h5:               1em !default;
-$font-size--h6:               1em !default;
 $font-size--small:            0.75em !default;
 
-$line-height:                 1.375em !default;
+$line-height:                 1.35em !default;
 
 $text-color:                  hsl(0, 0%, 10%) !default;
 $border-color:                hsl(0, 0%, 60%) !default;
@@ -27,23 +20,11 @@ $screen-sm:                   480px !default;
 
 $border-radius:               3px !default;
 
-
-
-// @font-face {
-//   font-family: 'FONTNAME';
-//   src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//        url('../fonts/FONTNAME.woff') format('woff'),
-//        url('../fonts/FONTNAME.ttf')  format('truetype');
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-
-
 body {
   // ТОЛЬКО типографика!
   font-family: $font-family;
   font-size: $font-size;
+  font-weight: 400;
   line-height: $line-height;
   color: $text-color;
 }
@@ -61,63 +42,84 @@ h4,
 h5,
 h6 {
   font-family: $font-family--headings;
-  font-weight: 700;
   line-height: $line-height;
-  color: currentColor;
+  color: $title-color;
+  text-transform: uppercase;
 }
 
 // .h1,
 // .h2,
 // .h3,
 h1,
-h2,
+h2 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  @include dubble-line(-30px, 50%, -50%, -1);
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 90px;
+    font-size: 27px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 90px;
+    font-size: 32px;
+  }
+}
+
 h3 {
   margin-top: $line-height;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 35px;
+  font-size: 18px;
+  font-weight: 600;
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 22px;
+  }
 }
 
-// .h4,
-// .h5,
-// .h6,
-h4,
-h5,
-h6 {
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
-}
-
-// .h1,
-h1 {
-  font-size: $font-size--h1;
-}
-
-// .h2,
-h2 {
-  font-size: $font-size--h2;
-}
-
-// .h3,
-h3 {
-  font-size: $font-size--h3;
-}
-
-// .h4,
 h4 {
-  font-size: $font-size--h4;
-}
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: ($line-height / 2);
+  margin-bottom: 25px;
 
-// .h5,
-h5 {
-  font-size: $font-size--h5;
-}
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
 
-// .h6,
-h6 {
-  font-size: $font-size--h6;
+  @media (min-width: $screen-xl) {
+    margin-bottom: 20px;
+  }
 }
 
 // .p,
-p,
+
+p {
+  margin-top: 0;
+  margin-bottom: ($line-height / 2);
+  font-size: 14px;
+  font-weight: 400;
+  hyphens: auto;
+
+  @media (min-width: $screen-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 18px;
+  }
+}
+
 ul,
 ol,
 dl,
@@ -125,8 +127,24 @@ blockquote,
 pre,
 address,
 figure {
+  font-size: 14px;
+  font-weight: 400;
   margin-top: ($line-height / 2);
   margin-bottom: ($line-height / 2);
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $main-color;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-skip: ink;
+  }
 }
 
 address {
@@ -151,7 +169,7 @@ li {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -202,31 +220,6 @@ blockquote {
   padding: 0;
   margin-left: 0;
   margin-right: 0;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: $font-family--monospace;
-}
-
-code {
-  padding: 0.06em 0.3em;
-  color: $text-color;
-  background-color: $gray-lightest;
-  border-radius: $border-radius;
-}
-
-kbd {
-  padding: 0.06em 0.3em;
-  color: $text-color;
-  background-color: $gray-lightest;
-  border-radius: $border-radius;
-
-  kbd {
-    padding: 0;
-  }
 }
 
 pre {

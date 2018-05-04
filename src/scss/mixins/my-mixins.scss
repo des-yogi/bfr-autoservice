@@ -16,3 +16,17 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.65);
 }
+
+@mixin dubble-line($bottom: -25px, $left: 100%, $shift-x: -100%, $mirror: 1) {
+  &::after {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    transform: translateX($shift-x) scaleX($mirror);
+    content: "";
+    width: 76px;
+    height: 14px;
+    background: url(../img/dubble-line.svg) no-repeat center center;
+    background-size: cover;
+  }
+}

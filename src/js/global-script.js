@@ -34,7 +34,8 @@ $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 30,
-    center: true,
+    autoHeight: true,
+    //center: true,
     nav: true,
     responsive: {
         0:{
