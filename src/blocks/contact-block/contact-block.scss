@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока contact-block, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока contact-block, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,222 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__row {
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      align-items: center;
+    }
+  }
+
+  &__col-1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $white;
+
+    @include col (
+      $screen:  xs,
+      $column:  12,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
+  }
+
+  &__col-2 {
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  7,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__form {
+    @media (min-width: $screen-md) {
+      position: relative;
+      z-index: 0;
+      padding-left: 35px;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: -30px;
+        content: "";
+        display: block;
+        width: calc(100% + 185px);
+        height: calc(100% + 60px);
+        background-color: $white;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 60px;
+
+      &::after {
+        top: -50px;
+        height: calc(100% + 100px);
+      }
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    input,
+    textarea {
+      width: 100%;
+      height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 16px;
+      border: 2px solid $gray-superlight;
+
+      &:hover,
+      &:focus {
+        border-color: $gray-light;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    textarea {
+      min-height: 110px;
+      padding: 15px;
+      resize: vertical;
+    }
+
+    label {
+      display: block;
+      position: absolute;
+      top: 17px;
+      left: 10px;
+      height: 15px;
+      width: auto;
+      padding: 0 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $gray-lighten;
+      background-color: $white;
+      pointer-event: none;
+      transition: $transition;
+    }
+
+    &--recapcha {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        display: block;
+      }
+    }
+
+    &--submit {
+      text-align: center;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 340px;
+
+    @media (min-width: $screen-md) {
+      max-width: none;
+    }
+  }
+
+  &__img-wrapper {
+    display: none;
+    overflow: hidden;
+
+    img {
+      display: block;
+      max-width: none;
+      height: 470px;
+      object-fit: contain;
+      object-position: left;
+
+      @media (min-width: $screen-xl) {
+        height: 515px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      display: block;
+
+      &::before {
+        position: absolute;
+        top: 14px;
+        left: 15px;
+        content: "";
+        display: block;
+        width: 40%;
+        height: calc(100% - 30px);
+        border-top: 2px solid $main-color;
+        border-bottom: 2px solid $main-color;
+        border-left: 2px solid $main-color;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      &::before {
+        width: 36%;
+      }
+    }
+  }
+}
+
+.error-message {
+  display: block;
+  height: 30px;
+  min-height: 30px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  color: $main-color;
+}
+
+input:focus + label,
+textarea:focus + label {
+  top: -9px;
 }

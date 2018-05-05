@@ -88,7 +88,7 @@ svg {
 
 img {
   max-width: 100%;
-  height: auto;
+  //height: auto;
 }
 
 main {
@@ -126,8 +126,13 @@ main {
   )
 }
 
-.row-full {
+.block-bg {
+  padding: 60px 0;
+  background-color: $bg-light;
 
+  @media (min-width: $screen-xl) {
+    padding-bottom: 90px;
+  }
 }
 
 // input defaults:

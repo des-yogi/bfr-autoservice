@@ -60,6 +60,10 @@ h2 {
   text-align: center;
   @include dubble-line(-30px, 50%, -50%, -1);
 
+  span {
+    color: $main-color;
+  }
+
   @media (min-width: $screen-md) {
     margin-bottom: 90px;
     font-size: 27px;
