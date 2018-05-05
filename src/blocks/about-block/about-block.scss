@@ -1,9 +1,197 @@
-// В этом файле должны быть стили для БЭМ-блока about-block, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока about-block, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .about-block {
+  margin-bottom: 60px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__row {
+    position: relative;
+    min-height: 410px;
+    background-color: $gray-light;
+    background-image: url(../img/about-img.jpg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: cover;
+
+    &::before {
+      position: absolute;
+      top: 30px;
+      right: 15px;
+      z-index: 1;
+      content: "";
+      display: block;
+      width: 41%;
+      height: calc(100% - 60px);
+      border-top: 2px solid $main-color;
+      border-bottom: 2px solid $main-color;
+      border-right: 2px solid $main-color;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  0,
+      $lg-grid-gutter:  0,
+      $xl-grid-gutter:  0
+    )
+
+    @media (min-width: $screen-md) {
+      align-items: center;
+      background: none;
+      background-image: linear-gradient(to right, transparent, transparent 185px, $bg-dark 185px, $bg-dark);
+
+      &::before {
+        position: absolute;
+        top: 14px;
+        right: 15px;
+        z-index: 0;
+        content: "";
+        display: block;
+        width: calc(100% - 215px);
+        height: calc(100% - 30px);
+        border: 2px solid $white;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    display: none;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: right center;
+    }
+
+    @include col (
+      $screen:  md,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  7,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 340px;
+      margin-top: 8.5%;
+      margin-bottom: 8.5%;
+      padding-left: 0;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 12px;
+        right: 25px;
+        z-index: 1;
+        content: "";
+        display: block;
+        width: 28.5%;
+        height: calc(100% - 30px);
+        border-top: 2px solid $main-color;
+        border-bottom: 2px solid $main-color;
+        border-right: 2px solid $main-color;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 390px !important;
+      padding-left: 0;
+      margin-top: 7%;
+      margin-bottom: 7%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+      }
+
+      &::before {
+        top: 14px;
+        right: 30px;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-left: 15px;
+    padding-right: 30px;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include col (
+      $screen:  md,
+      $column:  7,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: inherit;
+
+    span {
+      color: $main-color;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.35;
+
+    @media (min-width: $screen-md) {
+      padding-right: 30px;
+      line-height: 1.5;
+    }
+  }
 }

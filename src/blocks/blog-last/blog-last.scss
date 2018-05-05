@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока blog-last, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока blog-last, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,93 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__slides {
+
+  }
+
+  &__slide {
+    height: calc(100% !important);
+    margin-bottom: 25px;
+  }
+
+  .owl-stage {
+    display: flex !important;
+    align-items: stretch;
+  }
+
+  .owl-item {
+    display: flex !important;
+    align-items: stretch;
+    height: calc(100% !important);
+    // margin-bottom: 25px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 25px;
+    border-bottom: 2px solid $gray-superlight;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active,
+    &.active {
+      text-decoration: none;
+      color: inherit;
+      border-color: $main-color;
+    }
+  }
+
+  &__img-wrapper {
+
+  }
+
+  &__slide-title {
+    height: 55px;
+    margin-bottom: 15px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+
+    li + li {
+      margin-top: 10px;
+    }
+  }
+
+  &__list-item {
+
+  }
+
+  &__date {
+    width: 49%;
+    margin-top: auto;
+  }
+
+  &__likes {
+    width: 49%;
+    margin-top: auto;
+    text-align: right;
+  }
+
+  &__num {
+    padding-right: 5px;
+    color: $main-color;
+  }
 }

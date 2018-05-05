@@ -26,7 +26,29 @@
 }());
 
 $(document).ready(function(){
+
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
   });
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    autoHeight: true,
+    //center: true,
+    nav: true,
+    responsive: {
+        0:{
+            items: 1
+        },
+        768:{
+            items: 2
+        },
+        992:{
+            items: 3
+        }
+    }
+  });
+
 });
+

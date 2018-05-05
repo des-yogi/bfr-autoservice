@@ -7,13 +7,19 @@
 -->
 
 <header class="page-header" role="banner">
-  <div class="container">
 
-    <section class="top-nav">
+  <section class="top-nav">
+
+    <div class="container  top-nav__inner">
 
       <ul class="top-nav__phones-list">
         <li class="top-nav__phones-item">
           <a href="tel:+380674028382">+38 (067) 4028382</a>
+        </li>
+        <li class="top-nav__phones-item  top-nav__phones-item--icon">
+          <svg width="25" height="25">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-ico"></use>
+          </svg>
         </li>
         <li class="top-nav__phones-item">
           <a href="tel:+380674459198">+38 (067) 4459198</a>
@@ -21,36 +27,37 @@
       </ul>
 
       <article class="socials">
-        <a href="">
-          <span class="socials__fb">
-            <svg width="25" height="25">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-ico"></use>
-            </svg>
-          </span>
+        <a href="" class="socials__link">Facebook
+          <svg width="25" height="25">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-ico"></use>
+          </svg>
         </a>
-        <a href="" class="socials__link">
-          <span class="socials__viber">
-            <svg width="25" height="25">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-ico"></use>
-            </svg>
-          </span>
+        <a href="" class="socials__link">Viber
+          <svg width="25" height="25">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-ico"></use>
+          </svg>
         </a>
-        <a href="" class="socials__link">
-          <span class="socials__telegram">
-            <svg width="25" height="25">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-ico"></use>
-            </svg>
-          </span>
+        <a href="" class="socials__link">Telegram
+          <svg width="25" height="25">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-ico"></use>
+          </svg>
         </a>
       </article>
 
-    </section>
+    </div>
+
+  </section>
+
+  <div class="container  page-header__body-wrapper">
 
     <section class="page-header__body-top">
       <a href="/" class="logo" title="BFR-Autoservice">
-        <img src="img/bfr-logo.svg" alt="logo" width="130" height="56">
+        <svg width="130" height="56">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bfr-logo"></use>
+        </svg>
       </a>
-      <!-- <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div> -->
+      <h1 class="visually-hidden">BFR-Autoservice | Главная</h1>
+
       <div class="hamburger" id="hamburger-6">
         <span class="line"></span>
         <span class="line"></span>
@@ -58,7 +65,7 @@
       </div>
     </section>
 
-    <section class="body-bottom">
+    <section class="page-header__body-bottom">
       <nav id="main-nav" class="main-nav" role="navigation">
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item--active">
@@ -119,8 +126,10 @@
       </nav>
 
       <article class="main-action">
-
+        <h2 class="main-action__title">Акция</h2>
+        <p class="main-action__para">Бесплатная замена масла и диагностика ходовой</p>
       </article>
+
     </section>
 
   </div>

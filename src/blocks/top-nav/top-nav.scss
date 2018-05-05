@@ -1,9 +1,87 @@
-// В этом файле должны быть стили для БЭМ-блока top-nav, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .top-nav {
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 
   $block-name:                &; // #{$block-name}__element
 
+  &__inner {
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__phones-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    list-style-type: none;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__phones-item {
+
+    a {
+      display: block;
+      padding: 17px 0;
+      font-size: inherit;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:active {
+        color: $main-color;
+      }
+    }
+
+    svg {
+      fill: currentColor;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 25px;
+    }
+
+    &--icon {
+      @media (min-width: $screen-md) {
+        order: -1;
+      }
+    }
+  }
+
+  .socials {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    &__link {
+      display: inline-block;
+      margin-left: 25px;
+      @include text-hide;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:active {
+        color: $main-color;
+      }
+
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
 }

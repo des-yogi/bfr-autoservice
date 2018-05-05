@@ -1,9 +1,193 @@
-// В этом файле должны быть стили для БЭМ-блока services-block, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока services-block, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .services-block {
+  margin-bottom: 60px;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    //
+  }
+
+  &__row {
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  &__col {
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    &:nth-last-child(2) {
+      margin-bottom: 30px;
+
+      .services-block__item {
+        &::after {
+          display: none;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      @media (min-width: $screen-md) {
+        border-right: 2px solid $gray-superlight;
+      }
+
+      @media (min-width: $screen-xl) {
+        border-right: none;
+      }
+    }
+
+    &:nth-last-child(n+1) {
+      @media (min-width: $screen-xl) {
+        border-right: 2px solid $gray-superlight;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      @media (min-width: $screen-xl) {
+        border-right: none;
+      }
+    }
+
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      @media (min-width: $screen-md) {
+        border-bottom: none;
+      }
+    }
+
+    &:nth-last-child(4) {
+      @media (min-width: $screen-xl) {
+        border-bottom: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      border-bottom: 2px solid $gray-superlight;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 30px 30px;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 70%;
+      height: 2px;
+      background-color: $gray-superlight;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 50px 40px;
+    }
+  }
+
+  &__item-link {
+    text-decoration: none;
+    color: $text-color;
+    transition: all 0.3s ease;
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: $main-color;
+
+      .services-block__item-title {
+        color: currentColor;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item-title {
+    position: relative;
+    height: 48px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    &::after {
+      position: absolute;
+      bottom: -29px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 75px;
+      height: 2px;
+      background-color: $main-color;
+    }
+  }
+
+  &__item-descr {
+    font-weight: 300;
+    margin-bottom: 0;
+    color: $text-color--light;
+  }
+
+  &__btn-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+
+  &__link {
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+      width: 340px;
+    }
+  }
 
 }
