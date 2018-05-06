@@ -1,9 +1,51 @@
-// В этом файле должны быть стили для БЭМ-блока main-action, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока main-action, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .main-action {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 25px;
+  text-align: right;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  @media (min-width: $screen-md) {
+    max-width: 300px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+    color: inherit;
+
+    @include dubble-line();
+
+    /* &::after {
+      position: absolute;
+      bottom: -25px;
+      left: 100%;
+      transform: translateX(-100%);
+      content: "";
+      width: 76px;
+      height: 14px;
+      background: url(../img/dubble-line.svg) no-repeat center center;
+      background-size: cover;
+    }*/
+  }
+
+  &__para {
+    margin: 0;
+    font-weight: 300;
+  }
 
 }

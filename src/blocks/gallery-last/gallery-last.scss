@@ -1,9 +1,156 @@
-// В этом файле должны быть стили для БЭМ-блока gallery-last, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока gallery-last, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .gallery-last {
+  margin-bottom: 60px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__row {
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  &__col {
+    margin-bottom: 30px;
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__item {
+    background-color: $gray-light;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: $white;
+
+    &::before {
+      visibility: hidden;
+      @include header-overlay;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 85px;
+      background-image: linear-gradient(to top, $gray-darkest, transparent);
+    }
+  }
+
+  &__img-wrapper {
+    //width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      display: block;
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__item-title {
+    position: absolute;
+    z-index: 1;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $white;
+    overflow: hidden;
+  }
+
+  &__top-text {
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: $transition;
+  }
+
+  &__item-date {
+    color: $white;
+  }
+
+  &__item-likes {
+    color: $white;
+  }
+
+  &__num {
+    color: $main-color;
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+  }
+
+  &__link-all {
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: 340px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 340px;
+    }
+  }
+}
+
+.gallery-last__link:hover {
+  &::before,
+  .gallery-last__top-text {
+    visibility: visible;
+  }
 }
