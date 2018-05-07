@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>BFR-Autoservice</title>
+  <meta name="description" content="">  <meta name="viewport" content="width=device-width, initial-scale=1">  <meta name="MobileOptimized" content="320">  <meta name="format-detection" content="telephone=no">  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!-- <script>    // Маркер работающего javascript    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    document.addEventListener('DOMContentLoaded', function(){      if (window.isMobile !== undefined) {        // console.log(isMobile);        if(isMobile.any) {          var rootClasses = ' is-mobile';          for (key in isMobile) {            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;            if(typeof isMobile[key] === 'object' && key !== 'other') {              for (type in isMobile[key]) {                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;              }            }          }          document.documentElement.className += rootClasses;        }      }      else {        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');      }    });  </script> -->  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">      <header class="page-header" role="banner">        <section class="top-nav">          <div class="container  top-nav__inner">            <ul class="top-nav__phones-list">              <li class="top-nav__phones-item">                <a href="tel:+380674028382">+38 (067) 4028382</a>              </li>              <li class="top-nav__phones-item  top-nav__phones-item--icon">                <svg width="25" height="25">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-ico"/>                </svg>              </li>              <li class="top-nav__phones-item">                <a href="tel:+380674459198">+38 (067) 4459198</a>              </li>            </ul>            <article class="socials">              <a href="" class="socials__link">Facebook                <svg width="25" height="25">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-ico"/>                </svg>              </a>              <a href="" class="socials__link">Viber                <svg width="25" height="25">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-ico"/>                </svg>              </a>              <a href="" class="socials__link">Telegram                <svg width="25" height="25">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-ico"/>                </svg>              </a>            </article>          </div>        </section>        <div class="container  page-header__body-wrapper">          <section class="page-header__body-top">            <a href="/" class="logo" title="BFR-Autoservice">              <svg width="130" height="56">                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bfr-logo"/>              </svg>            </a>            <h1 class="visually-hidden">BFR-Autoservice | Главная</h1>            <div class="hamburger" id="hamburger-6">              <span class="line"></span>              <span class="line"></span>              <span class="line"></span>            </div>          </section>          <section class="page-header__body-bottom">            <nav id="main-nav" class="main-nav" role="navigation">              <ul class="main-nav__list">                <li class="main-nav__item  main-nav__item--active">                  <a href="" class="main-nav__link">                    Главная                  </a>                </li>                <li class="main-nav__item">                  <a href="" class="main-nav__link">                    Сервис                  </a>                  <ul class="main-nav__list  main-nav__list--lvl-2">                    <li class="main-nav__item  main-nav__item--lvl-2">                      <a href="" class="main-nav__link  main-nav__link--lvl-2">                        Услуги                      </a>                    </li>                    <li class="main-nav__item  main-nav__item--lvl-2">                      <a href="" class="main-nav__link  main-nav__link--lvl-2">                        Тюнинг                      </a>                    </li>                    <li class="main-nav__item  main-nav__item--lvl-2">                      <a href="" class="main-nav__link  main-nav__link--lvl-2">                        Цены                      </a>                    </li>                  </ul>                </li>                <li class="main-nav__item">                  <a href="http://nicothin.pro/" class="main-nav__link">                    Блог                  </a>                  <ul class="main-nav__list  main-nav__list--lvl-2">                    <li class="main-nav__item  main-nav__item--lvl-2">                      <a href="" class="main-nav__link  main-nav__link--lvl-2">                        Проекты                      </a>                    </li>                    <li class="main-nav__item  main-nav__item--lvl-2">                      <a href="" class="main-nav__link  main-nav__link--lvl-2">                        Статьи                      </a>                    </li>                  </ul>                </li>                <li class="main-nav__item">                  <a href="http://nicothin.pro/" class="main-nav__link">                    Галерея                  </a>                </li>                <li class="main-nav__item">                  <a href="http://nicothin.pro/" class="main-nav__link">                    Контакты                  </a>                </li>              </ul>            </nav>            <article class="main-action">              <h2 class="main-action__title">Акция</h2>              <p class="main-action__para">Бесплатная замена масла и диагностика ходовой</p>            </article>          </section>        </div>      </header>      <main role="main">
+        <div class="container">
+          <article class="services-block">
+            <h2 class="services-block__title"><span>1.</span> Предоставляемые услуги</h2>
+            <div class="services-block__row">
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#diagnostics-ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Компьютерная диагностика</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#engine-ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Ремонт двигателя</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#undercarriage-ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Ремонт ходовой</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#steering-ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Ремонт рулевого управления</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#transmission-ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Трансмиссия</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__col">
+                <section class="services-block__item">
+                  <a href="" class="services-block__item-link">
+                    <div class="services-block__img-wrapper">
+                      <svg width="80" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#exhaust_ico"/>
+                      </svg>
+                    </div>
+                    <h3 class="services-block__item-title">Ремонт выхлопной системы</h3>
+                  </a>
+                  <p class="services-block__item-descr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </section>
+              </div>
+              <div class="services-block__btn-wrapper">
+                <a href="" class="btn  services-block__link">Все услуги</a>
+              </div>
+            </div>
+          </article>
+          <article class="services-tuning">
+            <h2 class="services-tuning__title"><span>2.</span> Услуги тюнинга</h2>
+            <p class="services-tuning__para">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" </p>
+            <div class="services-tuning__btn-wrapper">
+              <a href="" class="btn  btn--invert  services-tuning__link  services-tuning__link">Все услуги</a>
+            </div>
+          </article>
+          <article class="blog-last">
+            <h2 class="blog-last__title"><span>3.</span> Последнее с блога</h2>
+            <div class="owl-carousel  blog-last__slides">
+              <div class="blog-last__slide">
+                <a class="blog-last__link" href="" title="">
+                  <div class="blog-last__img-wrapper">
+                    <img src="img/slide-img_01.jpg" alt="img" width="290" height="290">
+                  </div>
+                  <h3 class="blog-last__slide-title">Красивая и стильная</h3>
+                  <div class="blog-last__text">
+                    <ul class="blog-last__list">
+                      <li class="blog-last__list-item">Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                    </ul>
+                    <span class="blog-last__date">12/08/2018</span>
+                    <span class="blog-last__likes">
+                      <span class="blog-last__num">12</span>&nbsp;like
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class="blog-last__slide">
+                <a class="blog-last__link" href="" title="">
+                  <div class="blog-last__img-wrapper">
+                    <img src="img/slide-img_01.jpg" alt="img" width="290" height="290">
+                  </div>
+                  <h3 class="blog-last__slide-title">Красивая и стильная Audi S5 2015</h3>
+                  <div class="blog-last__text">
+                    <ul class="blog-last__list">
+                      <li class="blog-last__list-item">Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                    </ul>
+                    <span class="blog-last__date">12/08/2018</span>
+                    <span class="blog-last__likes">
+                      <span class="blog-last__num">12</span>&nbsp;like
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class="blog-last__slide">
+                <a class="blog-last__link" href="" title="">
+                  <div class="blog-last__img-wrapper">
+                    <img src="img/slide-img_01.jpg" alt="img" width="290" height="290">
+                  </div>
+                  <h3 class="blog-last__slide-title">Красивая и стильная Audi S5 2015</h3>
+                  <div class="blog-last__text">
+                    <ul class="blog-last__list">
+                      <li class="blog-last__list-item">Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                    </ul>
+                    <span class="blog-last__date">12/08/2018</span>
+                    <span class="blog-last__likes">
+                      <span class="blog-last__num">12</span>&nbsp;like
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class="blog-last__slide">
+                <a class="blog-last__link" href="" title="">
+                  <div class="blog-last__img-wrapper">
+                    <img src="img/slide-img_01.jpg" alt="img" width="290" height="290">
+                  </div>
+                  <h3 class="blog-last__slide-title">Красивая и стильная Audi S5 2017</h3>
+                  <div class="blog-last__text">
+                    <ul class="blog-last__list">
+                      <li class="blog-last__list-item">Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                    </ul>
+                    <span class="blog-last__date">12/08/2018</span>
+                    <span class="blog-last__likes">
+                      <span class="blog-last__num">12</span>&nbsp;like
+                    </span>
+                  </div>
+                </a>
+              </div>
+              <div class="blog-last__slide">
+                <a class="blog-last__link" href="" title="">
+                  <div class="blog-last__img-wrapper">
+                    <img src="img/slide-img_01.jpg" alt="img" width="290" height="290">
+                  </div>
+                  <h3 class="blog-last__slide-title">Красивая и стильная Audi S5 2018</h3>
+                  <div class="blog-last__text">
+                    <ul class="blog-last__list">
+                      <li class="blog-last__list-item">Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
+                      <li class="blog-last__list-item">Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
+                    </ul>
+                    <span class="blog-last__date">12/08/2018</span>
+                    <span class="blog-last__likes">
+                      <span class="blog-last__num">12</span>&nbsp;like
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-last">
+            <h2 class="gallery-last__title"><span>4.</span> Последнее с галереи</h2>
+            <div class="gallery-last__row">
+              <div class="gallery-last__col">
+                <section class="gallery-last__item">
+                  <a class="gallery-last__link" href="">
+                    <div class="gallery-last__img-wrapper">
+                      <img src="img/gallery-01.jpg" alt="img" width="320" height="225">
+                    </div>
+                    <h3 class="gallery-last__item-title">Ремонт пневмоподвески AUDI SS 2015</h3>
+                    <div class="gallery-last__top-text">
+                      <span class="gallery-last__item-date">12/08/2018</span>
+                      <span class="gallery-last__item-likes">
+                        <span class="gallery-last__num">12</span>&nbsp;like
+                      </span>
+                    </div>
+                  </a>
+                </section>
+              </div>
+              <div class="gallery-last__col">
+                <section class="gallery-last__item">
+                  <a class="gallery-last__link" href="">
+                    <div class="gallery-last__img-wrapper">
+                      <img src="img/gallery-01.jpg" alt="img" width="320" height="225">
+                    </div>
+                    <h3 class="gallery-last__item-title">Ремонт пневмоподвески AUDI SS 2015</h3>
+                    <div class="gallery-last__top-text">
+                      <span class="gallery-last__item-date">12/08/2018</span>
+                      <span class="gallery-last__item-likes">
+                        <span class="gallery-last__num">12</span>&nbsp;like
+                      </span>
+                    </div>
+                  </a>
+                </section>
+              </div>
+              <div class="gallery-last__col">
+                <section class="gallery-last__item">
+                  <a class="gallery-last__link" href="">
+                    <div class="gallery-last__img-wrapper">
+                      <img src="img/gallery-01.jpg" alt="img" width="320" height="225">
+                    </div>
+                    <h3 class="gallery-last__item-title">Ремонт пневмоподвески AUDI SS 2015</h3>
+                    <div class="gallery-last__top-text">
+                      <span class="gallery-last__item-date">12/08/2018</span>
+                      <span class="gallery-last__item-likes">
+                        <span class="gallery-last__num">12</span>&nbsp;like
+                      </span>
+                    </div>
+                  </a>
+                </section>
+              </div>
+              <div class="gallery-last__col">
+                <section class="gallery-last__item">
+                  <a class="gallery-last__link" href="">
+                    <div class="gallery-last__img-wrapper">
+                      <img src="img/gallery-01.jpg" alt="img" width="320" height="225">
+                    </div>
+                    <h3 class="gallery-last__item-title">Ремонт пневмоподвески AUDI SS 2015</h3>
+                    <div class="gallery-last__top-text">
+                      <span class="gallery-last__item-date">12/08/2018</span>
+                      <span class="gallery-last__item-likes">
+                        <span class="gallery-last__num">12</span>&nbsp;like
+                      </span>
+                    </div>
+                  </a>
+                </section>
+              </div>
+            </div>
+            <div class="gallery-last__btn-wrapper">
+              <a href="" class="btn  gallery-last__link-all">Смотреть все</a>
+            </div>
+          </article>
+        </div>
+        <div class="block-bg">
+          <div class="container">
+            <article class="about-block">
+              <h2 class="about-block__title"><span>5.</span> О нас</h2>
+              <div class="about-block__row">
+                <div class="about-block__img-wrapper">
+                  <img src="img/about-img.jpg" alt="img" width="280" height="335">
+                </div>
+                <div class="about-block__text">
+                  <h3 class="about-block__subtitle"><span>BFR</span> Autoservice</h3>
+                  <p class="about-block__descr">СТО "BFR" существует с 01.05.2017 на своих собственных площадях. Мы плотно работаем с легковыми автомобилями уже 12 лет. Предлагаем полный комплекс услуг по ремонту. Работаем со всеми марками авто. Специализируемся на марках AUDI, Volkswagen, Skoda, Seat, Mercedes, BMW, Dodge, Ford.</p>
+                </div>
+              </div>
+            </article>
+            <article class="contact-block">
+              <h2 class="contact-block__title"><span>6.</span> Связаться</h2>
+              <div class="contact-block__row">
+                <div class="contact-block__col-1">
+                  <form id="contact-index" class="contact-block__form" action="" method="">
+                    <div class="contact-block__input-wrapper">
+                      <input id="contact-name" type="text" name="name" value="">
+                      <label for="contact-name">Имя</label>
+                      <span class="error-message">Сообщение ошибке</span>
+                    </div>
+                    <div class="contact-block__input-wrapper">
+                      <input id="contact-tel" type="tel" name="tel" value="">
+                      <label for="contact-tel">Телефон</label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="contact-block__input-wrapper">
+                      <input id="contact-email" type="email" name="email" value="">
+                      <label for="contact-email">Email</label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="contact-block__input-wrapper">
+                      <textarea id="contact-message" name="message" value=""></textarea>
+                      <label for="contact-message">Сообщение</label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="contact-block__input-wrapper  contact-block__input-wrapper--recapcha">
+                      <img src="img/recapcha-sample.jpg" alt="" style="max-width: 290px">
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="contact-block__input-wrapper  contact-block__input-wrapper--submit">
+                      <button class="btn  contact-block__submit" type="submit">Отправить</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="contact-block__col-2">
+                  <div class="contact-block__img-wrapper">
+                    <img src="img/contact-block-img.jpg" alt="img">
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="page-footer" role="contentinfo">
+      <div class="container">
+        <div class="page-footer__top">
+          <a href="/" class="logo" title="BFR-Autoservice">
+            <svg width="130" height="56">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#bfr-logo"/>
+            </svg>
+          </a>
+        </div>
+        <div class="page-footer__row">
+          <div class="page-footer__contacts">
+            <div class="page-footer__address">ул. Полесская, 7<br>
+            (заезд с ул. Бориспольской)</div>
+            <div class="page-footer__tel">
+              <a href="tel:+380674028382">+38 (067) 4028382</a>
+              <a href="tel:+380674459198">+38 (067) 4459198</a>
+            </div>
+            <div class="page-footer__email">
+              <a href="mailto:i@bfr.com.ua">i@bfr.com.ua</a>
+            </div>
+          </div>
+          <ul class="page-footer__nav" role="navigation">
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Главная</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Блог</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Сервис</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Галерея</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Контакты</a>
+            </li>
+          </ul>
+          <article class="socials">
+            <a class="socials__link" href="">
+              <span class="socials__fb">
+                <svg width="25" height="25">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook-ico"/>
+                </svg>
+              </span>
+            </a>
+            <a href="" class="socials__link">
+              <span class="socials__viber">
+                <svg width="25" height="25">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#viber-ico"/>
+                </svg>
+              </span>
+            </a>
+            <a href="" class="socials__link">
+              <span class="socials__telegram">
+                <svg width="25" height="25">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#telegram-ico"/>
+                </svg>
+              </span>
+            </a>
+          </article>
+        </div>
+        <div class="page-footer__bottom  copyrights">
+          <span class="copyrights__owner"><span>©</span> BFR AUTOSERVICE</span>
+          <a class="copyrights__dev-link" href="http://it-doors.com/" rel="nofollow" target="_blank">IT Doors Outsourcing
+            <svg width="75" height="27">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#it-doors-logo"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>  <script src="js/script.min.js"></script></body>
+</html>
