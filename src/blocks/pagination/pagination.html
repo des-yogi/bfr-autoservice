@@ -1,22 +1,36 @@
 <!--DEV
-
 Для использования этого файла как шаблона:
 
 @ @include('blocks/pagination/pagination.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
+-->
 
 <div class="pagination">
-  <a href="" class="pagination__item">1</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">5</a>
-  <a href="" class="pagination__item  pagination__item--active">6</a>
-  <a href="" class="pagination__item">123</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">999</a>
+  <ul class="pagination__list">
+    <li class="pagination__item">
+      <a class="pagination__link  pagination__link--prev" href="">
+        <svg width="10" height="22">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-thin-right-ico"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="">1</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="">2</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="">…</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="">5</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link  pagination__link--next" href="">
+        <svg width="10" height="22">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-thin-right-ico"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
 </div>
-
--->

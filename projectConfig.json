@@ -40,7 +40,17 @@
     "about-block": [],
     "contact-block": [],
     "copyrights": [],
-    "main-action": []
+    "main-action": [],
+    "gallery": [],
+    "gallery-item": [],
+    "services-price": [],
+    "services-repairs": [],
+    "repairs-item": [],
+    "blog": [],
+    "blog-project": [],
+    "page-contacts": [],
+    "gallery-detailed": [],
+    "share-block": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

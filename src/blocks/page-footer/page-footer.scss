@@ -195,10 +195,9 @@
       display: block;
       width: 30px;
       height: 24px;
-      background: $main-color;
-      //background-repeat: no-repeat;
-      // background-position: center;
-      // background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 100%;
     }
 
     @media (min-width: $screen-md) {
@@ -207,7 +206,10 @@
   }
 
   &__address {
-    // background: url(../img/);
+    &::after {
+      background: url(../img/pin-ico.svg);
+      background-repeat: no-repeat;
+    }
   }
 
   &__tel {
@@ -222,7 +224,10 @@
           margin-bottom: 0;
         }
       }
-
+    }
+    &::after {
+      background: url(../img/phone-ico.svg);
+      background-repeat: no-repeat;
     }
   }
 
@@ -235,12 +240,12 @@
       left: -45px;
       content: "";
       display: block;
-      width: 30px;
-      height: 24px;
-      background: $main-color;
-      //background-repeat: no-repeat;
-      // background-position: center;
-      // background-size: 100%;
+      width: 29px;
+      height: 20px;
+      background: url(../img/letter-ico.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 100%;
     }
   }
 
