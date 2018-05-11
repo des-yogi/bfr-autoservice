@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>BFR-Autoservice</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <div class="container">
+
+          <article class="contacts">
+
+            <h1 class="contacts__title">Контакты</h1>
+
+            <div class="contacts__row">
+
+              <div class="contacts__col">
+                <div class="contacts__card">
+                    <div class="contacts__icon-wrapper">
+                      <svg width="72" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#letter-ico"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts__text">
+                      <span>Пишите</span>
+                      <a href="mailto:i@bfr.com.ua">i@bfr.com.ua</a>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="contacts__col">
+                <div class="contacts__card">
+                    <div class="contacts__icon-wrapper">
+                      <svg width="72" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-ico"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts__text">
+                      <span>Звоните</span>
+                      <a href="tel:+380674028382 ">+38 (067) 4028382</a>
+                      <a href="tel:+380674459198">+38 (067) 4459198</a>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="contacts__col">
+                <div class="contacts__card">
+                    <div class="contacts__icon-wrapper">
+                      <svg width="72" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#pin-ico"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts__text">
+                      <span>Приезжайте</span>
+                      <div class="contacts__address">
+                        ул. Полесская, 7 <br>(заезд с ул.&nbsp;Бориспольской,&nbsp;34А)
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="contacts__col">
+                <div class="contacts__card">
+                    <div class="contacts__icon-wrapper">
+                      <svg width="72" height="49">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#clock-ico"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts__text">
+                      <span>График роботы</span>
+                      <ul class="contacts__schedule">
+                        <li>Будние дни: с 09<sup>00</sup> до 18<sup>00</sup></li>
+                        <li>Суббота: с 09<sup>00</sup> до 17<sup>00</sup></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+
+            <section class="map">
+              <div class="map__content">
+
+              </div>
+            </section>
+
+            @@include('blocks/contact-block/contact-block.html')
+          </article>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    @@include('blocks/page-footer/page-footer.html')
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

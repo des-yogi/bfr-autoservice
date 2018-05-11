@@ -1,0 +1,305 @@
+// В этом файле должны быть стили для БЭМ-блока services-repairs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services-repairs {
+
+  .services-tuning__descr {
+    margin-bottom: 0;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+
+  }
+
+  &__row {
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  .services-repairs__col-1 {
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  .services-repairs__col-2 {
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  7,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  8,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__controls {
+    padding: 35px 20px;
+    margin-bottom: 35px;
+    border: 2px solid $gray-superlight;
+  }
+
+  &__form-title {
+    position: relative;
+    margin-top: 0;
+
+    &::before {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background-color: $main-color;
+    }
+  }
+
+  &__form {
+
+    input[type=radio] {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-family: $font-family--headings;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: $title-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $main-color;
+
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  input[type=radio]:checked + label {
+    color: $main-color;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &__icon {
+      display: inline-block;
+      flex-shrink: 0;
+      width: 50px;
+      // height: 50px;
+      margin-right: 25px;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  &__ctrl-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $gray-superlight;
+
+    &:last-child {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+
+  &__descr-top {
+
+    .services-repairs__text {
+      @media (min-width: $screen-xl) {
+        width: calc(100% - 150px - 30px);
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 22px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 100%;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__descr-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $screen-xl) {
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+
+  &__descr-img-inner {
+    margin-right: 20px;
+    overflow: hidden;
+    max-width: 50%;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 100%;
+      margin-bottom: 25px;
+      margin-right: 0;
+    }
+  }
+
+  &__list-title {
+    margin-top: 60px;
+  }
+
+  &__list {
+    margin-top: 0;
+    margin-bottom: 60px;
+    padding-left: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    @include list-decorated;
+  }
+
+  &__col {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/share-block/share-block.html')
+-->
+<!-- Не забыть вставить Правильный Url на страницу!!!  -->
+<div class="share-block">
+  <a class="share-block__link" href="javascript:fbShare('https://custom-url.com.ua/', 'https://custom-url.com.ua/Изображение.jpg', 'Заголовок', 'Название сайта', 'Краткое описание', 520, 350)" class="facebook-share">Поделиться
+    <svg width="21" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share-ico"></use>
+    </svg>
+  </a>
+   <script>
+     function fbShare(siteUrl, picture, title, caption, descr, winWidth,  winHeight) {
+       var winTop = (screen.height / 2) - (winHeight / 2);
+       var winLeft = (screen.width / 2) - (winWidth / 2);
+       window.open('http://www.facebook.com/sharer.php?s=100&u=' + siteUrl + '&picture=' + picture + '&title=' + title + '&caption=' + caption , '&description=' + descr, 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+     }
+ </script>
+</div>
