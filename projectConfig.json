@@ -1,5 +1,6 @@
 {
   "blocks": {
+    "404": [],
     "page": [],
     "is-mobile": [],
     "typo": [],
@@ -50,7 +51,13 @@
     "blog-project": [],
     "page-contacts": [],
     "gallery-detailed": [],
-    "share-block": []
+    "share-block": [],
+    "contacts": [],
+    "map": [],
+    "search-result": [],
+    "blog-aside": [],
+    "search-form": [],
+    "disqus": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

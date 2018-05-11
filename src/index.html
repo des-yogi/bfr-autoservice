@@ -255,52 +255,7 @@
 
             </article>
 
-            <article class="contact-block">
-              <h2 class="contact-block__title"><span>6.</span> Связаться</h2>
-
-              <div class="contact-block__row">
-
-                <div class="contact-block__col-1">
-                  <form id="contact-index" class="contact-block__form" action="" method="">
-                    <div class="contact-block__input-wrapper">
-                      <input id="contact-name" type="text" name="name" value="">
-                      <label for="contact-name">Имя</label>
-                      <span class="error-message">Сообщение ошибке</span>
-                    </div>
-                    <div class="contact-block__input-wrapper">
-                      <input id="contact-tel" type="tel" name="tel" value="">
-                      <label for="contact-tel">Телефон</label>
-                      <span class="error-message"></span>
-                    </div>
-                    <div class="contact-block__input-wrapper">
-                      <input id="contact-email" type="email" name="email" value="">
-                      <label for="contact-email">Email</label>
-                      <span class="error-message"></span>
-                    </div>
-                    <div class="contact-block__input-wrapper">
-                      <textarea id="contact-message" name="message" value=""></textarea>
-                      <label for="contact-message">Сообщение</label>
-                      <span class="error-message"></span>
-                    </div>
-                    <div class="contact-block__input-wrapper  contact-block__input-wrapper--recapcha">
-                      <img src="img/recapcha-sample.jpg" alt="" style="max-width: 290px">
-                      <span class="error-message"></span>
-                    </div>
-                    <div class="contact-block__input-wrapper  contact-block__input-wrapper--submit">
-                      <button class="btn  contact-block__submit" type="submit">Отправить</button>
-                    </div>
-                  </form>
-                </div>
-
-                <div class="contact-block__col-2">
-                  <div class="contact-block__img-wrapper">
-                    <img src="img/contact-block-img.jpg" alt="img">
-                  </div>
-                </div>
-
-              </div>
-
-            </article>
+            @@include('blocks/contact-block/contact-block.html')
 
           </div>
 

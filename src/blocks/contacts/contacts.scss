@@ -1,0 +1,155 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+
+  }
+
+  &__row {
+    margin-bottom: 60px;
+    justify-content: center;
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  &__col {
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    &:nth-child(odd) {
+      @media (min-width: $screen-md) {
+        border-right: 2px solid $gray-superlight;
+      }
+
+      @media (min-width: $screen-xl) {
+        border-right: none;
+      }
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      @media (min-width: $screen-md) {
+        border-bottom: none;
+      }
+    }
+
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      @media (min-width: $screen-xl) {
+        border-right: 2px solid $gray-superlight;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      border-bottom: 2px solid $gray-superlight;
+    }
+
+    @media (min-width: $screen-xl) {
+      border-bottom: none;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 50px 50px;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 70%;
+      height: 2px;
+      background-color: $gray-superlight;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    margin-bottom: 50px;
+
+    svg {
+      display: inline-block;
+      fill: $main-color;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.35;
+
+    span {
+      position: relative;
+      display: block;
+      margin-bottom: 70px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &::after {
+        position: absolute;
+        bottom: -33px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        display: block;
+        width: 75px;
+        height: 2px;
+        background-color: $main-color;
+      }
+    }
+
+    a {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__address {
+    line-height: 2;
+  }
+
+  &__schedule {
+    padding: 0;
+    list-style-type: none;
+    li {
+      font-size: 16px;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+  }
+}

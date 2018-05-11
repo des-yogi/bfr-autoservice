@@ -127,12 +127,9 @@ main {
 }
 
 .block-bg {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $bg-light;
-
-  @media (min-width: $screen-xl) {
-    padding-bottom: 90px;
-  }
 }
 
 // input defaults:
