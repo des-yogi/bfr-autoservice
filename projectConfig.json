@@ -57,7 +57,11 @@
     "search-result": [],
     "blog-aside": [],
     "search-form": [],
-    "disqus": []
+    "disqus": [],
+    "accordion": [],
+    "blog-projects": [],
+    "blog-item": [],
+    "blog-nav": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

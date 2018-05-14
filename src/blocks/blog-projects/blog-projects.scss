@@ -1,0 +1,59 @@
+// В этом файле должны быть стили для БЭМ-блока blog-projects, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.blog-projects {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+
+  }
+
+  &__row {
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  &__aside-col {
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      order: 1;
+    }
+  }
+
+  &__blog-item-col {
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  8,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+}

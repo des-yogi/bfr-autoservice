@@ -52,4 +52,20 @@ $(document).ready(function(){
     }
   });
 
+  $(".blog-aside__thumbs").accordionjs({
+
+    // The section open on first init.
+    activeIndex : 1,
+
+    // Closeable section.
+    closeAble: true,
+
+    // Close other sections.
+    closeOther: true,
+
+    // the speed of slide animation.
+    slideSpeed: 200
+
+  });
+
 });

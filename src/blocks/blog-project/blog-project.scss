@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока blog-project, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока blog-project, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,107 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+  }
+
+  &__text-block {
+
+  }
+
+  &__img-row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width
+    )
+  }
+
+  &__img-col {
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__big-img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 14px;
+
+      @media (min-width: $screen-md) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__soc-wrapper {
+    margin-top: 25px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
+  }
 }

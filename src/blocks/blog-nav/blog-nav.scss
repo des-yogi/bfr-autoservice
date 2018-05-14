@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока blog-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+.blog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  // padding-top: 15px;
+  // padding-bottom: 15px;
+  padding-right: 15px;
+  border: 2px solid $gray-superlight;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 40px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 70px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:hover {
+      color: $main-color;
+      text-decoration: none;
+
+      span {
+        border-color: currentColor;
+      }
+    }
+  }
+
+  &__link-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+    border: 2px solid $gray-superlight;
+
+    svg {
+      display: block;
+      margin: auto;
+      fill: $text-color;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__link-text {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+  }
+}

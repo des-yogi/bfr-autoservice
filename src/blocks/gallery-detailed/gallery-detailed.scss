@@ -6,40 +6,12 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__top-nav {
-    margin-bottom: 30px;
+  &__soc-wrapper {
+    text-align: center;
 
     @media (min-width: $screen-md) {
-      margin-bottom: 40px;
+      text-align: right;
     }
-
-    @media (min-width: $screen-xl) {
-      margin-bottom: 70px;
-    }
-  }
-
-  &__prev {
-
-  }
-
-  &__link {
-
-    &--prev {
-
-    }
-
-  }
-
-  &__link-text {
-
-  }
-
-  &__date {
-
-  }
-
-  &__soc-wrapper {
-
   }
 
   &__title {
@@ -143,6 +115,7 @@
   }
 
   &__images {
+    margin-bottom: 30px;
 
     @include row (
       $xs-grid-gutter:  $grid-gutter-width,
