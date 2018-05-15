@@ -74,6 +74,7 @@
   &__body-bottom {
     position: relative;
     height: calc(100% - 60px - 35px);
+    overflow: hidden;
 
     @media (min-width: $screen-md) {
       display: flex;

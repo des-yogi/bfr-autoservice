@@ -50,15 +50,21 @@
             <div class="blog-project__img-row">
 
               <div class="blog-project__img-col">
-                <img src="img/blog-01.jpg" alt="img" width="320" height="230">
+                <a class="thumbnail gallery-blog" href="img/blog-big-desktop@1x.jpg">
+                  <img src="img/blog-01.jpg" alt="img" width="320" height="230">
+                </a>
               </div>
 
               <div class="blog-project__img-col">
-                <img src="img/blog-01.jpg" alt="img" width="320" height="230">
+                <a class="thumbnail gallery-blog" href="img/blog-big-desktop@1x.jpg">
+                  <img src="img/blog-02.jpg" alt="img" width="320" height="230">
+                </a>
               </div>
 
               <div class="blog-project__img-col">
-                <img src="img/blog-01.jpg" alt="img" width="320" height="230">
+                <a class="thumbnail gallery-blog" href="img/blog-big-desktop@1x.jpg">
+                  <img src="img/blog-01.jpg" alt="img" width="320" height="230">
+                </a>
               </div>
 
             </div>
@@ -73,11 +79,13 @@
             <div class="blog-project__big-img">
               <figure>
                 <div class="blog-project__img-wrapper">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/blog-big-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/blog-big-tablet@1x.jpg">
-                    <img src="img/blog-big-mobile@1x.jpg" alt="big-img" width="320" height="230">
-                  </picture>
+                  <a class="thumbnail gallery-blog" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/blog-big-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/blog-big-tablet@1x.jpg">
+                      <img src="img/blog-big-mobile@1x.jpg" alt="big-img" width="320" height="230">
+                    </picture>
+                  </a>
                 </div>
                 <figcaption>Ходовая часть автомобиля является конструктивной частью автомобиля.</figcaption>
               </figure>
@@ -114,6 +122,19 @@
   </div>
 
   @@include('_include/page_bottom.html')
+
+  <script>
+    $(document).ready(function(){
+
+        /*$('.gallery-blog2').featherlightgallery-blog({
+          gallery-blog: {
+            next: 'next »',
+            previous: '« previous'
+          },
+          variant: 'featherlight-gallery-blog2'
+        });*/
+      });
+  </script>
 
 </body>
 </html>

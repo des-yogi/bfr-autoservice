@@ -68,7 +68,9 @@
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/featherlight/release/featherlight.min.css",
+    "../../node_modules/featherlight/release/featherlight.gallery.min.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -80,6 +82,9 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
+    "./node_modules/detect_swipe/jquery.detect_swipe.js",
+    "./node_modules/featherlight/release/featherlight.min.js",
+    "./node_modules/featherlight/release/featherlight.gallery.min.js",
     "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [

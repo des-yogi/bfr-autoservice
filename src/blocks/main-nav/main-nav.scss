@@ -4,7 +4,8 @@
 $transition-time:             0.3s !default;
 
 .main-nav {
-  display: none;
+  // display: none;
+  transform: translateX(-100%);
 
   @media (min-width: $screen-md) {
     display: inline-block;
@@ -43,6 +44,7 @@ $transition-time:             0.3s !default;
 
   &__item {
     position: relative;
+    margin-bottom: 0;
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
@@ -95,11 +97,11 @@ $transition-time:             0.3s !default;
 }
 
 // пример работы по ховеру
-.main-nav__item:hover,
+/* .main-nav__item:hover,
 .main-nav__item.active {
   .main-nav__list--lvl-2 {
     @media (min-width: $screen-md) {
       display: flex;
     }
   }
-}
+} */
