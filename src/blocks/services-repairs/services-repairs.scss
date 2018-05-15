@@ -102,12 +102,15 @@
     label {
       display: flex;
       align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
       font-family: $font-family--headings;
       font-size: 15px;
       font-weight: 600;
       line-height: 1.35;
       color: $title-color;
       cursor: pointer;
+      transition: $transition;
 
       &:hover {
         color: $main-color;
@@ -142,8 +145,8 @@
     }
 
   &__ctrl-wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-bottom: 2px solid $gray-superlight;
 
     &:last-child {

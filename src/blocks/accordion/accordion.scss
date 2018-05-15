@@ -1,0 +1,106 @@
+// Default plugin styles
+
+.accordionjs {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  // Section
+  // ---------------
+  .acc_section {
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+    margin-bottom: 30px;
+
+    // Head
+    // ------------
+    .acc_head {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //padding: 15px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      color: $text-color;
+      background: $white;
+      border-bottom: 2px solid $gray-superlight;
+      cursor: pointer;
+
+      h3 {
+        margin: 5px 0;
+        font-size: 16px;
+        line-height: 1;
+        color: currentColor;
+      }
+
+      span {
+        margin-right: 5px;
+        transform: rotate(90deg);
+
+        svg {
+          display: block;
+          fill: currentColor;
+        }
+      }
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+    // Content
+    // ---------------
+    .acc_content{
+      padding: 10px;
+    }
+
+    // General rules
+    // ---------------------
+    // Border radius
+    &:first-of-type,
+    &:first-of-type .acc_head{
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+    &:last-of-type,
+    &:last-of-type .acc_content{
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      /* @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      } */
+    }
+
+    //JS Requirements
+    &.acc_active {
+      > .acc_content{
+        display: block;
+      }
+      > .acc_head {
+        color: $main-color;
+        background-color: $white;
+        // border-bottom: 1px solid #ccc;
+
+        span {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+// my styles
+

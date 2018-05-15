@@ -5,7 +5,10 @@
 @ @include('blocks/share-block/share-block.html')
 -->
 <!-- Не забыть вставить Правильный Url на страницу!!!  -->
-<div class="share-block">
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+
+<!-- <div class="share-block">
+  Кастомный модуль ПОДЕЛИТЬСЯ
   <a class="share-block__link" href="javascript:fbShare('https://custom-url.com.ua/', 'https://custom-url.com.ua/Изображение.jpg', 'Заголовок', 'Название сайта', 'Краткое описание', 520, 350)" class="facebook-share">Поделиться
     <svg width="21" height="24">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share-ico"></use>
@@ -17,5 +20,5 @@
        var winLeft = (screen.width / 2) - (winWidth / 2);
        window.open('http://www.facebook.com/sharer.php?s=100&u=' + siteUrl + '&picture=' + picture + '&title=' + title + '&caption=' + caption , '&description=' + descr, 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
      }
- </script>
+ </script> -->
 </div>

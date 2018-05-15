@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока blog-aside, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока blog-aside, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,63 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__thumbs {
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
+  }
+
+  &__arrow {
+
+  }
+
+  &__content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 25px;
+
+    h4 {
+      color: currentColor;
+    }
+
+    &:hover {
+      color: $main-color;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__thumb-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__project-name {
+    flex-shrink: 1;
+    width: auto;
+    font-size: 14px;
+    margin: 0;
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
+  }
 }

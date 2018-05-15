@@ -1,0 +1,125 @@
+// В этом файле должны быть стили для БЭМ-блока blog-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.blog-item {
+  margin-bottom: 50px;
+
+  a {
+    display: block;
+  }
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title-link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: inline-block !important;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__para {
+
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__more-link {
+    position: relative;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid $white;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: $main-color;
+    }
+
+    &::after {
+      position: absolute;
+      top: 9px;
+      right: -20px;
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      //background-color: $text-color;
+      border: 6px solid currentColor;
+      border-bottom-color: $white;
+      border-top-color: $white;
+      border-right-color: $white;
+    }
+  }
+
+  &__likes {
+    position: relative;
+    display: block;
+    padding-right: 38px;
+    font-weight: 500;
+    color: $main-color;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "likes";
+      display: block;
+      color: $text-color;
+    }
+  }
+}

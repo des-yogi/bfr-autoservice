@@ -195,7 +195,6 @@ textarea {
   font-family: inherit;
   font-size: 0.85em;
   color: inherit;
-  //visibility: hidden;
 }
 
 .visible {
@@ -259,4 +258,60 @@ textarea {
     border-color: $main-color !important;
     outline: none;
   }
+}
+
+@keyframes menuSlideOpen {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuSlideClose {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.mobile-menu-open {
+  animation: menuSlideOpen 0.3s ease-in-out both;
+}
+
+.mobile-menu-close {
+  animation: menuSlideClose 0.3s ease-in-out both;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.block-zoom-in {
+  animation: zoomIn 0.3s ease-in-out forwards;
+}
+
+.block-zoom-out {
+  animation: zoomOut 0.3s ease-in-out forwards;
 }

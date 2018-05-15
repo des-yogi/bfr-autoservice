@@ -11,13 +11,13 @@
 <body>
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.0';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
   <div class="page__inner">
 
@@ -30,23 +30,7 @@
         <div class="container">
           <article class="gallery-detailed">
 
-            <div class="gallery-detailed__top-nav" role="navigation">
-              <div class="gallery-detailed__prev">
-                <a class="gallery-detailed__link--prev" href="">
-                  <span class="gallery-detailed__link-text">Назад</span>
-                  <svg width="10" height="22">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-thin-right-ico"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="gallery-detailed__date">Март 8, 2018</div>
-              <div class="gallery-detailed__soc-wrapper">
-                <!-- Like button code: Не забыть вставить Правильную ссылку на страницу -->
-                <!-- <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div> -->
-
-                @@include('blocks/share-block/share-block.html')
-              </div>
-            </div>
+            @@include('blocks/blog-nav/blog-nav.html')
 
             <h1 class="gallery-detailed__title">Ремонт пневмпоподвески audi ss 2015</h1>
 
@@ -75,11 +59,13 @@
 
               <div class="gallery-detailed__col">
                 <figure class="gallery-detailed__figure">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
-                    <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
-                  </picture>
+                  <a class="thumbnail gallery-detail" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
+                      <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
+                    </picture>
+                  </a>
                   <figcaption>
                     Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс, деревни. О, большого эта агенство. Своего инициал, единственное текстов.
                   </figcaption>
@@ -88,11 +74,13 @@
 
               <div class="gallery-detailed__col">
                 <figure class="gallery-detailed__figure">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
-                    <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
-                  </picture>
+                  <a class="thumbnail gallery-detail" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
+                      <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
+                    </picture>
+                  </a>
                   <figcaption>
                     Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс, деревни. О, большого эта агенство. Своего инициал, единственное текстов.
                   </figcaption>
@@ -101,11 +89,13 @@
 
               <div class="gallery-detailed__col">
                 <figure class="gallery-detailed__figure">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
-                    <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
-                  </picture>
+                  <a class="thumbnail gallery-detail" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
+                      <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
+                    </picture>
+                  </a>
                   <figcaption>
                     Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс, деревни. О, большого эта агенство. Своего инициал, единственное текстов.
                   </figcaption>
@@ -114,11 +104,13 @@
 
               <div class="gallery-detailed__col">
                 <figure class="gallery-detailed__figure">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
-                    <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
-                  </picture>
+                  <a class="thumbnail gallery-detail" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
+                      <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
+                    </picture>
+                  </a>
                   <figcaption>
                     Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс, деревни. О, большого эта агенство. Своего инициал, единственное текстов.
                   </figcaption>
@@ -127,11 +119,13 @@
 
               <div class="gallery-detailed__col">
                 <figure class="gallery-detailed__figure">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
-                    <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
-                    <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
-                  </picture>
+                  <a class="thumbnail gallery-detail" href="img/blog-big-desktop@1x.jpg">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/gallery-detailed-desktop@1x.jpg">
+                      <source media="(min-width: 768px)" srcset="img/gallery-detailed-tablet@1x.jpg">
+                      <img src="img/gallery-detailed-mobile@1x.jpg" alt="img" width="320" height="227">
+                    </picture>
+                  </a>
                   <figcaption>
                     Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс, деревни. О, большого эта агенство. Своего инициал, единственное текстов.
                   </figcaption>
@@ -139,6 +133,12 @@
               </div>
 
             </section>
+
+            <!-- Like button code: Не забыть вставить Правильную ссылку на страницу -->
+
+            <div class="gallery-detailed__soc-wrapper">
+              @@include('blocks/share-block/share-block.html')
+            </div>
 
           </article>
         </div>
