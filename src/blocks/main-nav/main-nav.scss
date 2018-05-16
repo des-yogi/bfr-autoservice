@@ -52,7 +52,7 @@ $transition-time:             0.3s !default;
     color: $white;
 
     @media (min-width: $screen-md) {
-      display: inline-block;
+      display: block;
       font-size: 16px;
     }
 

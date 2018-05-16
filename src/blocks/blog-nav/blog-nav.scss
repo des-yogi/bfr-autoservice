@@ -6,10 +6,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  // padding-top: 15px;
-  // padding-bottom: 15px;
   padding-right: 15px;
-  border: 2px solid $gray-superlight;
+  // border: 2px solid $gray-superlight;
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.15);
 
   @media (min-width: $screen-md) {
     margin-bottom: 40px;

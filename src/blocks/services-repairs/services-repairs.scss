@@ -277,7 +277,7 @@
 
     @include col (
       $screen:  md,
-      $column:  6,
+      $column:  4,
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
@@ -289,7 +289,7 @@
       $gutter:  $grid-gutter-width
     )
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
   }
