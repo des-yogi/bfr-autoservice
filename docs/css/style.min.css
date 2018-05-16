@@ -3548,7 +3548,7 @@ textarea:focus + label {
           -webkit-transform: translateY(calc(-50% + 1.2em + 0.5em));
                   transform: translateY(calc(-50% + 1.2em + 0.5em)); }
       .main-nav__item {
-        display: inline-block;
+        display: block;
         font-size: 16px; }
       .main-nav__link {
         padding-top: 1.2em;
@@ -3778,11 +3778,13 @@ textarea:focus + label {
                 transform: translateY(-3px); }
     .services-repairs__col {
       -webkit-box-flex: 0;
-          -ms-flex: 0 0 50%;
-              flex: 0 0 50%;
-      max-width: 50%;
+          -ms-flex: 0 0 33.33333%;
+              flex: 0 0 33.33333%;
+      max-width: 33.33333%;
       padding-left: 15px;
       padding-right: 15px; }
+    .services-repairs__col {
+      margin-bottom: 0; }
     .blog-project__text-block ul {
       margin-top: 40px;
       margin-bottom: 40px; }
@@ -4132,8 +4134,6 @@ textarea:focus + label {
       max-width: 33.33333%;
       padding-left: 15px;
       padding-right: 15px; }
-    .services-repairs__col {
-      margin-bottom: 0; }
     .blog-project__img-wrapper {
       margin-bottom: 20px; }
     .gallery-detailed__title {
