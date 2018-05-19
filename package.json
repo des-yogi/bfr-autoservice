@@ -21,7 +21,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
-    "autoprefixer": "^8.3.0",
+    "autoprefixer": "^8.5.0",
     "browser-sync": "^2.18.8",
     "const": "^1.0.0",
     "cross-env": "^5.0.0",

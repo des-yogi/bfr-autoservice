@@ -61,22 +61,42 @@
   var menuLvl2 = menu.querySelectorAll('.main-nav__list--lvl-2');
 
   var menuClickHadler = function(e) {
-    // e.preventDefault();
-    // alert('!');
     var selected = this.children[1];
     if (selected.classList.contains('main-nav__list--lvl-2')) {
       menuLvl2.forEach(function(item) {
         item.style.display = 'none';
       });
       selected.style.display = 'flex';
+      selected.style.flexDirection = 'column';
     }
+  };
+
+  var menuOutHadler = function(e) {
+    var selected = this.children[1];
+    /*if (selected.classList.contains('main-nav__list--lvl-2')) {
+      menuLvl2.forEach(function(item) {
+        item.style.display = 'none';
+      });
+      selected.style.display = 'flex';
+
+    }*/
+      window.setTimeout(function() {
+        selected.style.display = 'none';
+      }, 4000);
   };
 
   menuItem.forEach(function (item) {
     item.addEventListener('click', menuClickHadler);
   });
 
-  //menuItem.addEventListener('click', menuClickHadler);
+  /*menuItem.forEach(function (item) {
+    item.addEventListener('mouseover', menuClickHadler);
+  });
+
+  menuItem.forEach(function (item) {
+    item.addEventListener('mouseout', menuOutHadler);
+  });*/
+
 })();
 
 $(document).ready(function(){
