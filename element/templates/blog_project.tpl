@@ -7,7 +7,7 @@
 
         <div class="blog-nav" role="navigation">
           <div class="blog-nav__prev">
-            <a class="blog-nav__link  blog-nav__link--prev" href="">
+            <a class="blog-nav__link  blog-nav__link--prev" href="[[~[[*parent]]]]">
                   <span class="blog-nav__link-icon">
                     <svg width="10" height="22">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
@@ -16,58 +16,64 @@
               <span class="blog-nav__link-text">Назад</span>
             </a>
           </div>
-          <div class="blog-nav__date">Март 8, 2018</div>
+          <div class="blog-nav__date">[[*publishedon:date=`%d.%m.%Y`]]</div>
         </div>
-        <h1 class="blog-project__title">Красивая и стильная AUDI SS 2015</h1>
+        <h1 class="blog-project__title">[[*pagetitle]]</h1>
         <section class="blog-project__text-block">
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взобравшись по всей возвращайся, заманивший все буквенных она речью лучше пор безорфографичный страна продолжил? Коварный грустный однажды, своих что семантика даже текста рекламных назад все lorem.</p>
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварный маленький свое которой lorem одна, прямо меня назад бросил проектах силуэт. Безорфографичный, курсивных ipsum.</p>
+          <p>[[*introtext]]</p>
           <ul>
-            <li>Удаление катализаторов, сварка выхлопа с прямоточными стронгерами. Спортивные прямоточные резонаторы</li>
-            <li>Поднятие компрессора с заменой ремкомплектов форсунок и всех прокладок</li>
-            <li>Замена охлаждающей жидкости и датчиков высокого и низкого давления масла</li>
+            [[!getImageList?
+            &tvname=`works_list`
+            &tpl=`@CODE: <li>[[+works_name]]</li>`
+            &docid=`[[*id]]`
+            &limit=`99`
+            ]]
           </ul>
         </section>
-        <div class="blog-project__img-row">
-          <div class="blog-project__img-col">
-            <a class="thumbnail gallery-blog" href="assets/site/img/blog-big-desktop@1x.jpg">
-              <img src="assets/site/img/blog-01.jpg" alt="img" width="320" height="230">
-            </a>
-          </div>
-          <div class="blog-project__img-col">
-            <a class="thumbnail gallery-blog" href="assets/site/img/blog-big-desktop@1x.jpg">
-              <img src="assets/site/img/blog-02.jpg" alt="img" width="320" height="230">
-            </a>
-          </div>
-          <div class="blog-project__img-col">
-            <a class="thumbnail gallery-blog" href="assets/site/img/blog-big-desktop@1x.jpg">
-              <img src="assets/site/img/blog-01.jpg" alt="img" width="320" height="230">
-            </a>
-          </div>
+        [[!getImageList?
+        &tvname=`blog_img`
+        &tpl=`@CODE:
+        <div class="blog-project__img-col">
+          <a class="thumbnail gallery-blog" href="[[+img1]]">
+            <img src="[[+img1]]" alt="[[+pagetitle]]" width="320" height="230">
+          </a>
         </div>
+        <div class="blog-project__img-col">
+          <a class="thumbnail gallery-blog" href="[[+img2]]">
+            <img src="[[+img2]]" alt="[[+pagetitle]]" width="320" height="230">
+          </a>
+        </div>
+        <div class="blog-project__img-col">
+          <a class="thumbnail gallery-blog" href="[[+img3]]">
+            <img src="[[+img3]]" alt="[[+pagetitle]]" width="320" height="230">
+          </a>
+        </div>
+        `
+        &docid=`[[*id]]`
+        &limit=`999`
+        &wrapperTpl=`@CODE: <div class="blog-project__img-row">[[+output]]</div>`
+        ]]
+
         <section class="blog-project__text-block">
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взобравшись по всей возвращайся, заманивший все буквенных она речью лучше пор безорфографичный страна продолжил? Коварный грустный однажды, своих что семантика даже текста рекламных назад все lorem.</p>
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварный маленький свое которой lorem одна, прямо меня назад бросил проектах силуэт. Безорфографичный, курсивных ipsum.</p>
+          <p>[[#[[*id]].blog_text]]</p>
         </section>
+
         <div class="blog-project__big-img">
           <figure>
             <div class="blog-project__img-wrapper">
-              <a class="thumbnail gallery-blog" href="assets/site/img/blog-big-desktop@1x.jpg">
+              <a class="thumbnail gallery-blog" href="[[#[[*id]].blog_big_img]]">
                 <picture>
-                  <source media="(min-width: 1280px)" srcset="img/blog-big-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/blog-big-tablet@1x.jpg">
-                  <img src="assets/site/img/blog-big-mobile@1x.jpg" alt="big-img" width="320" height="230">
+                  <source media="(min-width: 1280px)" srcset="[[#[[*id]].blog_big_img]]">
+                  <source media="(min-width: 768px)" srcset="[[#[[*id]].blog_big_img]]">
+                  <img src="[[#[[*id]].blog_big_img]]" alt="big-img" width="320" height="230">
                 </picture>
               </a>
             </div>
-            <figcaption>Ходовая часть автомобиля является конструктивной частью автомобиля.</figcaption>
+            <figcaption>[[#[[*id]].blog_big_descr]]</figcaption>
           </figure>
         </div>
         <section class="blog-project__text-block">
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взобравшись по всей возвращайся, заманивший все буквенных она речью лучше пор безорфографичный страна продолжил? Коварный грустный однажды, своих что семантика даже текста рекламных назад все lorem.</p>
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварный маленький свое которой lorem одна, прямо меня назад бросил проектах силуэт. Безорфографичный, курсивных ipsum.</p>
-          <h3>Подзаголовок</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sapiente quae quam libero quas neque! Hic debitis optio non veniam error eveniet corporis impedit architecto, deserunt numquam recusandae modi! Dolores quaerat tempore maiores iure fugit quam at doloremque facilis voluptatem perferendis. Quisquam eum porro totam quas hic earum accusamus, maiores quo autem repellendus adipisci laboriosam, voluptatibus animi perferendis.</p>
+          [[*content]]
         </section>
         <!-- Like button code: Не забыть вставить Правильную ссылку на страницу -->
         <div class="blog-project__soc-wrapper">

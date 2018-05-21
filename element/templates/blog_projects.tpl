@@ -4,13 +4,16 @@
   <main role="main">
     <div class="container">
       <div class="blog-projects">
-        <h1 class="blog-projects__title">[[*parent:getThisField=`pagetitle`]] / <span>[[*pagetitle]]</h1>
+        <h1 class="blog-projects__title">[[*parent:getThisField=`pagetitle`]] / <span>[[*pagetitle]]</span></h1>
         <div class="blog-projects__row">
+
           <div class="blog-projects__aside-col">
+
             <aside class="blog-aside">
-              <form id="search-form" class="search-form" action="search/simple" method="get">
+
+              <form id="mse2_form" class="well msearch2 search-form" action="[[~75]]" method="get">
                 <div class="search-form__ctrl-wrapper">
-                  <input class="search-form__input" type="text" name="query" placeholder="Поиск по сайту" value="" autocomplete="off">
+                  <input class="search-form__input" type="text" name="query" placeholder="Поиск по сайту" value="[[+mse2_query]]">
                   <button type="submit" class="search-form__submit">
                     <svg width="24" height="24">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#search-ico"/>
@@ -19,59 +22,57 @@
                   </button>
                 </div>
               </form>
+
               <div class="blog-aside__thumbs">
+
                 <div class="accordion_in">
                   <div class="acc_head">
                     <h3>Активные проекты</h3>
                     <span class="blog-aside__arrow">
-                          <svg width="8" height="18">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
+                      <svg width="8" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
                           </svg>
-                        </span>
+                    </span>
                   </div>
                   <div class="acc_content  blog-aside__content">
-                    <a class="blog-aside__link" href="">
-                      <div class="blog-aside__thumb-wrapper">
-                        <img src="assets/site/img/thumb.jpg" alt="thumb" width="60" height="60">
-                      </div>
-                      <h4 class="blog-aside__project-name">Подготовка к драгрейсингу и так далее</h4>
-                    </a>
-                    <a class="blog-aside__link" href="">
-                      <div class="blog-aside__thumb-wrapper">
-                        <img src="assets/site/img/thumb.jpg" alt="thumb" width="60" height="60">
-                      </div>
-                      <h4 class="blog-aside__project-name">Тюнинг АУДИ А5</h4>
-                    </a>
-                    <a class="blog-aside__link" href="">
-                      <div class="blog-aside__thumb-wrapper">
-                        <img src="assets/site/img/thumb.jpg" alt="thumb" width="60" height="60">
-                      </div>
-                      <h4 class="blog-aside__project-name">Тюнинг BMW M3</h4>
-                    </a>
+                    [[pdoResources?
+                    &parents=`11`
+                    &depth=`0`
+                    &limit=`5`
+                    &includeTVs=`is_active`
+                    &where=`{ "is_active":"1" }`
+                    &tpl=`@FILE chunks/aside_project.tpl`
+                    ]]
                   </div>
                 </div>
                 <div class="accordion_in">
                   <div class="acc_head">
                     <h3>Завершенные проекты</h3>
                     <span class="blog-aside__arrow">
-                          <svg width="8" height="18">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
+                      <svg width="8" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
                           </svg>
-                        </span>
+                    </span>
                   </div>
                   <div class="acc_content  blog-aside__content">
-                    <a class="blog-aside__link" href="">
-                      <div class="blog-aside__thumb-wrapper">
-                        <img src="assets/site/img/thumb.jpg" alt="thumb" width="60" height="60">
-                      </div>
-                      <h4 class="blog-aside__project-name">Подготовка к драгрейсингу</h4>
-                    </a>
+                    [[pdoResources?
+                    &parents=`11`
+                    &depth=`0`
+                    &limit=`5`
+                    &includeTVs=`is_active`
+                    &where=`{ "is_active":"" }`
+                    &tpl=`@FILE chunks/aside_project.tpl`
+                    ]]
                   </div>
                 </div>
               </div>
+
             </aside>
+
           </div>
+
           <div class="blog-projects__blog-item-col">
+
             <article class="blog-item">
               <div class="blog-item__img-wrapper">
                 <a href="blog-project.html">
@@ -83,7 +84,7 @@
                 </a>
               </div>
               <h3 class="blog-item__title">
-                <a class="blog-item__title-link" href="blog-project.html">Красивая и стильная Audi S5 2015</a>
+                <a class="blog-item__title-link" href="blog-project.html">Заголовок</a>
               </h3>
               <div class="blog-item__text">
                 <span class="blog-item__date">Март 8, 2018</span>
