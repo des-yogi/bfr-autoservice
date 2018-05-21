@@ -32,6 +32,10 @@ $border-color:                hsl(0, 0%, 60%) !default;
       margin-right: 0;
     }
 
+    &.disabled {
+      font-size: 32px;
+    }
+
     @media (min-width: $screen-md) {
       margin-right: 20px;
     }
@@ -89,8 +93,14 @@ $border-color:                hsl(0, 0%, 60%) !default;
       }
     }
 
-    &--active {
-      background-color: $gray-lightest;
+    &.active {
+      border-color: $main-color;
+      color: $title-color;
+    }
+
+    &.disabled {
+      border-color: $gray-superlight;
+      pointer-events: none;
     }
 
     @media (min-width: $screen-md) {
