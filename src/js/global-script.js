@@ -168,3 +168,49 @@ $(document).ready(function(){
   });
 
 });
+
+(function(){
+  var contactForm = document.getElementById('contact-index');
+  var inputFields = contactForm.querySelectorAll('.contact-block__control');
+  var labelsArr = contactForm.querySelectorAll('label');
+
+/*  var test = function (item) {
+    var id = item.id;
+    var value = item.value;
+
+    labelsArr.forEach(function(label) {
+      label.style.top = -9 + 'px';
+      if (value === '' && label.htmlFor === id) {
+        label.style.top = 17 + 'px';
+      } else label.style.top = -9 + 'px';
+    });
+
+  };*/
+
+  var inputFocusHandler = function (e) {
+    //test(this);
+    var id = this.id;
+    labelsArr.forEach(function(label) {
+      if (label.htmlFor === id) {
+        label.style.top = -9 + 'px';
+      }
+    });
+  };
+
+  var inputBlurHandler = function (e) {
+    // test(this);
+    if (this.value === '') {
+      var id = this.id;
+      labelsArr.forEach(function(label) {
+        if (label.htmlFor === id) {
+          label.style.top = 17 + 'px';
+        }
+      });
+    } else return;
+  };
+
+  inputFields.forEach(function(item) {
+    item.addEventListener('focus', inputFocusHandler);
+    item.addEventListener('blur', inputBlurHandler);
+  });
+}());
