@@ -10,8 +10,8 @@
             [[!pdoPage@sitepagination?
             &parents=`[[*id]]`
             &depth=`0`
+            &includeTVs=`project_image`
             &tpl=`@FILE chunks/gallery_item_card.tpl`
-            &includeTVs=``
             ]]
           </div>
         </article>
