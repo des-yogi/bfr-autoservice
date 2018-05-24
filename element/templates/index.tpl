@@ -71,12 +71,14 @@
     </div>
     <div class="block-bg">
       <div class="container">
+        <!-- About-block -->
         [[pdoResources?
         &parents=`1`
         &resources=`81`
         &depth=`0`
         &tpl=`@FILE chunks/about.tpl`
         ]]
+
         {include 'file:chunks/contact_block.tpl'}
       </div>
     </div>

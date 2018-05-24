@@ -171,18 +171,21 @@ $(document).ready(function(){
 
 (function(){
   var contactForm = document.getElementById('contact-index');
-  var inputFields = contactForm.querySelectorAll('.contact-block__control');
-  var labelsArr = contactForm.querySelectorAll('label');
+  if (contactForm) {
+    var inputFields = contactForm.querySelectorAll('.contact-block__control');
+    var labelsArr = contactForm.querySelectorAll('label');
+  }
 
 /*  var test = function (item) {
     var id = item.id;
     var value = item.value;
 
     labelsArr.forEach(function(label) {
-      label.style.top = -9 + 'px';
-      if (value === '' && label.htmlFor === id) {
-        label.style.top = 17 + 'px';
-      } else label.style.top = -9 + 'px';
+
+      if (label.htmlFor === id && label.style.top === '-9px') {
+        return;
+      } else
+      ;
     });
 
   };*/
@@ -209,8 +212,10 @@ $(document).ready(function(){
     } else return;
   };
 
-  inputFields.forEach(function(item) {
-    item.addEventListener('focus', inputFocusHandler);
-    item.addEventListener('blur', inputBlurHandler);
-  });
+  if (inputFields) {
+    inputFields.forEach(function(item) {
+      item.addEventListener('focus', inputFocusHandler);
+      item.addEventListener('blur', inputBlurHandler);
+    });
+  }
 }());

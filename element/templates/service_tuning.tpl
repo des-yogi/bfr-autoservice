@@ -22,7 +22,7 @@
                 <a href="[[+link]]" class="services-repairs__link">
                   <span class="services-repairs__icon">
                     <svg width="80" height="49">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_tuning]]"></use>
+                      <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_tuning]]"></use>
                     </svg>
                   </span>
                   [[+menutitle]]
@@ -34,7 +34,7 @@
                 <a href="[[+link]]" class="services-repairs__link">
                   <span class="services-repairs__icon">
                     <svg width="80" height="49">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_tuning]]"></use>
+                      <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_tuning]]"></use>
                     </svg>
                   </span>
                   [[+menutitle]]

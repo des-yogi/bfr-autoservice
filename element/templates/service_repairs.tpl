@@ -22,7 +22,7 @@
                 <a href="[[+link]]" class="services-repairs__link">
                   <span class="services-repairs__icon">
                     <svg width="80" height="49">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_repairs]]"></use>
+                      <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_repairs]]"></use>
                     </svg>
                   </span>
                   [[+menutitle]]
@@ -34,7 +34,7 @@
                 <a href="[[+link]]" class="services-repairs__link">
                   <span class="services-repairs__icon">
                     <svg width="80" height="49">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_repairs]]"></use>
+                      <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#[[+icon_repairs]]"></use>
                     </svg>
                   </span>
                   [[+menutitle]]
@@ -53,20 +53,7 @@
                 <div class="services-repairs__descr-top">
                   [[!getImageList?
                   &tvname=`repairs_block_1`
-                  &tpl=`@CODE:
-                  <h2 class="services-repairs__subtitle">[[+title]]</h2>
-                  <div class="services-repairs__text">
-                    <p>[[+intro]]</p>
-                  </div>
-                  <div class="services-repairs__descr-img">
-                    <div class="services-repairs__descr-img-inner">
-                      <img src="[[+text_img1]]" alt="[[*pagetitle]]" width="145" height="123">
-                    </div>
-                    <div class="services-repairs__descr-img-inner">
-                      <img src="[[+text_img2]]" alt="[[*pagetitle]]" width="145" height="123">
-                    </div>
-                  </div>
-                  `
+                  &tpl=`service_text_tpl`
                   &docid=`[[*id]]`
                   &limit=`1`
                   ]]
@@ -84,33 +71,24 @@
             </section>
           </div>
         </div>
-        <section class="services-repairs__gallery">
-          <h2 class="visually-hidden">Галерея отремонтированных авто</h2>
-          <div class="services-repairs__row">
-            <div class="services-repairs__col">
-              <div class="services-repairs__img-wrapper">
-                <!-- ссылка - большое фото -->
-                <a class="thumbnail gallery-repairs" href="assets/site/img/repairs-photo-01.jpg">
-                  <img src="assets/site/img/repairs-photo-01.jpg" alt="img" width="290" height="240">
-                </a>
-              </div>
+
+        {if $_modx->resource.id != '7' ?}
+          <section class="services-repairs__gallery">
+            <h2 class="visually-hidden">Галерея видов выполненных работ по ремонту</h2>
+            <div class="services-repairs__row">
+
+              [[!getImageList?
+              &tvname=`repairs_img`
+              &tpl=`repairs_img_tpl`
+              &docid=`[[*id]]`
+              &limit=`3`
+              &randomize=`1`
+              ]]
+
             </div>
-            <div class="services-repairs__col">
-              <div class="services-repairs__img-wrapper">
-                <a class="thumbnail gallery-repairs" href="assets/site/img/repairs-photo-02.jpg">
-                  <img src="assets/site/img/repairs-photo-02.jpg" alt="img" width="290" height="240">
-                </a>
-              </div>
-            </div>
-            <div class="services-repairs__col">
-              <div class="services-repairs__img-wrapper">
-                <a class="thumbnail gallery-repairs" href="assets/site/img/repairs-photo-03.jpg">
-                  <img src="assets/site/img/repairs-photo-03.jpg" alt="img" width="290" height="240">
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        {/if}
+
       </article>
     </div>
   </main>

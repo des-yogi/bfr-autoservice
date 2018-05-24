@@ -43,7 +43,7 @@
 <div class="page__inner">
   <div class="page__content">
 
-    <header class="page-header" role="banner" style="background-image: url([[*header_bg]]);">
+    <header class="page-header" role="banner" style="background-image: url([[pthumb? &input=`[[*header_bg]]` &options=`fltr[]=usm`]]);">
       <section class="top-nav">
         <div class="container  top-nav__inner">
           <ul class="top-nav__phones-list">
@@ -83,7 +83,7 @@
       </section>
       <div class="container  page-header__body-wrapper">
         <section class="page-header__body-top">
-          <a href="/" class="logo" title="[[++company_name]]">
+          <a {if $_modx->resource.id == '1' ?}{else}href="/"{/if} class="logo" title="[[++company_name]]">
             <svg width="130" height="56">
               <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
             </svg>
@@ -147,7 +147,7 @@
     <footer class="page-footer" role="contentinfo">
       <div class="container">
         <div class="page-footer__top">
-          <a href="/" class="logo" title="[[++company_name]]">
+          <a {if $_modx->resource.id == '1' ?}{else}href="/"{/if} class="logo" title="[[++company_name]]">
             <svg width="130" height="56">
               <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
             </svg>
