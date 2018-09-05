@@ -26,6 +26,8 @@
   }
 
   .services-repairs__col-1 {
+    order: 1;
+
     @include col (
       $screen:  xs,
       $column:  $grid-columns,
@@ -46,6 +48,10 @@
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
+
+    @media (min-width: $screen-md) {
+      order: 0;
+    }
   }
 
   .services-repairs__col-2 {
@@ -158,70 +164,8 @@
     }
   }
 
-  /* &__form {
-
-    input[type=radio] {
-      display: none;
-    }
-
-    label {
-      display: flex;
-      align-items: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      font-family: $font-family--headings;
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 1.35;
-      color: $title-color;
-      cursor: pointer;
-      transition: $transition;
-
-      &:hover {
-        color: $main-color;
-
-        svg {
-          fill: currentColor;
-        }
-      }
-    }
-  }
-
-  input[type=radio]:checked + label {
-    color: $main-color;
-
-    svg {
-      fill: currentColor;
-    }
-  }
-
-  &__icon {
-      display: inline-block;
-      flex-shrink: 0;
-      width: 50px;
-      // height: 50px;
-      margin-right: 25px;
-
-      svg {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-  &__ctrl-wrapper {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-bottom: 2px solid $gray-superlight;
-
-    &:last-child {
-      padding-bottom: 0;
-      border: none;
-    }
-  } */
-
   &__descr {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     ul {
       margin-top: 0;
@@ -236,6 +180,10 @@
     li {
       list-style-type: none;
       @include list-decorated;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
     }
   }
 
