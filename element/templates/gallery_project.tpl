@@ -1,5 +1,19 @@
 {extends 'file:templates/layout.tpl'}
 
+{block 'fb_scipt'}
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  {ignore}
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+  {/ignore}
+{/block}
+
 {block 'main'}
   <main role="main">
     <div class="container">
@@ -10,7 +24,7 @@
             <a class="blog-nav__link  blog-nav__link--prev" href="[[~[[*parent]]]]">
                   <span class="blog-nav__link-icon">
                     <svg width="10" height="22">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
+                      <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#arrow-thin-right-ico"/>
                     </svg>
                   </span>
               <span class="blog-nav__link-text">Назад</span>
@@ -65,10 +79,11 @@
           &limit=`99`
           ]]
         </section>
+
         <!-- Like button code: Не забыть вставить Правильную ссылку на страницу -->
         <div class="gallery-detailed__soc-wrapper">
 
-          <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+          <div class="fb-like" data-href="[[~[[*id]]? &scheme=`full`]]" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
           </div>
 
         </div>

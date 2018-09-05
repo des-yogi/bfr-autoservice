@@ -55,8 +55,14 @@
     }
 
     &--icon {
+      margin-top: 5px;
+
       @media (min-width: $screen-md) {
         order: -1;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 10px;
       }
     }
   }

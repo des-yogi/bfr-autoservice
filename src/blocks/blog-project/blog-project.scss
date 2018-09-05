@@ -64,6 +64,10 @@
       $lg-grid-gutter:  $grid-gutter-width,
       $xl-grid-gutter:  $grid-gutter-width
     )
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
   }
 
   &__img-col {
@@ -97,7 +101,7 @@
     )
 
     @media (min-width: $screen-md) {
-      margin-bottom: 0;
+      margin-bottom: 30px;
     }
   }
 

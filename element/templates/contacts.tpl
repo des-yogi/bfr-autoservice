@@ -10,7 +10,7 @@
             <div class="contacts__card">
               <div class="contacts__icon-wrapper">
                 <svg width="72" height="49">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#letter-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#letter-ico"/>
                 </svg>
               </div>
               <div class="contacts__text">
@@ -23,13 +23,13 @@
             <div class="contacts__card">
               <div class="contacts__icon-wrapper">
                 <svg width="72" height="49">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#phone-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#phone-ico"/>
                 </svg>
               </div>
               <div class="contacts__text">
                 <span>Звоните</span>
-                <a href="tel:[[++company_tel1]] ">[[++company_tel1:phone_format]]</a>
-                <a href="tel:[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
+                <a href="tel:+[[++company_tel1]] ">[[++company_tel1:phone_format]]</a>
+                <a href="tel:+[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
             <div class="contacts__card">
               <div class="contacts__icon-wrapper">
                 <svg width="72" height="49">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#pin-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#pin-ico"/>
                 </svg>
               </div>
               <div class="contacts__text">
@@ -52,7 +52,7 @@
             <div class="contacts__card">
               <div class="contacts__icon-wrapper">
                 <svg width="72" height="49">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#clock-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#clock-ico"/>
                 </svg>
               </div>
               <div class="contacts__text">
@@ -67,51 +67,10 @@
         </div>
         <section class="map">
           <div class="map__content">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.110202702411!2d30.68328762195897!3d50.420109050137874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4c3cb296647%3A0x6364c130c719163e!2z0LLRg9C70LjRhtGPINCf0L7Qu9GW0YHRjNC60LAsIDcsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1526992051391" frameborder="0" style="border:0; width: 100%; height: 100%" allowfullscreen></iframe>
           </div>
         </section>
-        <article class="contact-block">
-          <h2 class="contact-block__title"><span>6.</span> Связаться</h2>
-          <div class="contact-block__row">
-            <div class="contact-block__col-1">
-
-              <form id="contact-index" class="contact-block__form" action="" method="">
-                <div class="contact-block__input-wrapper">
-                  <input id="contact-name" type="text" name="name" value="">
-                  <label for="contact-name">Имя</label>
-                  <span class="error-message">Сообщение ошибке</span>
-                </div>
-                <div class="contact-block__input-wrapper">
-                  <input id="contact-tel" type="tel" name="tel" value="">
-                  <label for="contact-tel">Телефон</label>
-                  <span class="error-message"></span>
-                </div>
-                <div class="contact-block__input-wrapper">
-                  <input id="contact-email" type="email" name="email" value="">
-                  <label for="contact-email">Email</label>
-                  <span class="error-message"></span>
-                </div>
-                <div class="contact-block__input-wrapper">
-                  <textarea id="contact-message" name="message" value=""></textarea>
-                  <label for="contact-message">Сообщение</label>
-                  <span class="error-message"></span>
-                </div>
-                <div class="contact-block__input-wrapper  contact-block__input-wrapper--recapcha">
-                  <img src="assets/site/img/recapcha-sample.jpg" alt="" style="max-width: 290px">
-                  <span class="error-message"></span>
-                </div>
-                <div class="contact-block__input-wrapper  contact-block__input-wrapper--submit">
-                  <button class="btn  contact-block__submit" type="submit">Отправить</button>
-                </div>
-              </form>
-
-            </div>
-            <div class="contact-block__col-2">
-              <div class="contact-block__img-wrapper">
-                <img src="assets/site/img/contact-block-img.jpg" alt="img">
-              </div>
-            </div>
-          </div>
-        </article>
+        {include 'file:chunks/contact_block.tpl'}
       </article>
     </div>
   </main>

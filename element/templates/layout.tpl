@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: http://ogp.me/ns#">
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   {block 'title'}
@@ -12,13 +12,13 @@
   <meta name="keywords" content="[[+seoPro.keywords]]">
   <meta name="description" content="[[*description]]">
   <meta name="robots" content="[[+seoTab.robotsTag]]">
-  <!--
-  <meta property="og:url"           content="[[++site_url]][[~[[*id]]]]" />
+
+  <meta property="og:url"           content="[[~[[*id]]?&scheme=`full`]]" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="[[*pagetitle:default=`[[*longtitle]]`]]" />
   <meta property="og:description"   content="[[*description]]" />
-  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
-  -->
+  <meta property="og:image"         content="{if $_modx->resource.og_img ?} {$_modx->config.site_url}{$_modx->resource.og_img} {else} {$_modx->config.site_url}assets/images/4_Header_Footer/og-img-default.jpg {/if}" />
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="assets/site/css/style.min.css" rel="stylesheet" media="screen">
   {block 'add_css'}{/block}
@@ -37,42 +37,45 @@
   <meta name="msapplication-config" content="assets/site/img/browserconfig.xml">
   <meta name="theme-color" content="#ffffff"></head>
 <body>
+
+{block 'fb_scipt'}{/block}
+
 <div class="page__inner">
   <div class="page__content">
 
-    <header class="page-header" role="banner" style="background-image: url([[*header_bg]]);">
+    <header class="page-header" role="banner" style="background-image: url([[pthumb? &input=`[[*header_bg]]` &options=`fltr[]=usm`]]);">
       <section class="top-nav">
         <div class="container  top-nav__inner">
           <ul class="top-nav__phones-list">
             <li class="top-nav__phones-item">
-              <a href="tel:[[++company_tel1]]">[[++company_tel1:phone_format]]</a>
+              <a href="tel:+[[++company_tel1]]">[[++company_tel1:phone_format]]</a>
             </li>
             <li class="top-nav__phones-item  top-nav__phones-item--icon">
               <svg width="25" height="25">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#phone-ico"/>
+                <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#phone-ico"/>
               </svg>
             </li>
             <li class="top-nav__phones-item">
-              <a href="tel:[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
+              <a href="tel:+[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
             </li>
           </ul>
           <article class="socials">
 
             <a href="https://www.facebook.com/%D0%A1%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-BFR-113833552629880/" class="socials__link" rel="follow,index" target="_blank">Facebook
               <svg width="25" height="25">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#facebook-ico"/>
+                <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#facebook-ico"/>
               </svg>
             </a>
 
             <a href="viber://add?number=[[++company_viber]]" class="socials__link" title="Viber">Viber
               <svg width="25" height="25">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#viber-ico"/>
+                <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#viber-ico"/>
               </svg>
             </a>
 
             <a href="tg://resolve?domain=[[++company_telegram]]" class="socials__link" title="Telegram">Telegram
               <svg width="25" height="25">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#telegram-ico"/>
+                <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#telegram-ico"/>
               </svg>
             </a>
           </article>
@@ -80,9 +83,9 @@
       </section>
       <div class="container  page-header__body-wrapper">
         <section class="page-header__body-top">
-          <a href="/" class="logo" title="[[++company_name]]">
+          <a {if $_modx->resource.id == '1' ?}{else}href="/"{/if} class="logo" title="[[++company_name]]">
             <svg width="130" height="56">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
+              <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
             </svg>
           </a>
           <h1 class="visually-hidden">[[*longtitle]]</h1>
@@ -144,9 +147,9 @@
     <footer class="page-footer" role="contentinfo">
       <div class="container">
         <div class="page-footer__top">
-          <a href="/" class="logo" title="[[++company_name]]">
+          <a {if $_modx->resource.id == '1' ?}{else}href="/"{/if} class="logo" title="[[++company_name]]">
             <svg width="130" height="56">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
+              <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#bfr-logo"/>
             </svg>
           </a>
         </div>
@@ -154,46 +157,36 @@
           <div class="page-footer__contacts">
             <div class="page-footer__address">[[++company_address]]</div>
             <div class="page-footer__tel">
-              <a href="tel:[[++company_tel1]]">[[++company_tel1:phone_format]]</a>
-              <a href="tel:[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
+              <a href="tel:+[[++company_tel1]]">[[++company_tel1:phone_format]]</a>
+              <a href="tel:+[[++company_tel2]]">[[++company_tel2:phone_format]]</a>
             </div>
             <div class="page-footer__email">
               <a href="mailto:i@bfr.com.ua">[[++company_email]]</a>
             </div>
           </div>
-          {*[[pdoMenu?
-          &parents=`0`
-          &level=`1`
-          &tplOuter=`@INLINE <ul class="page-footer__nav" role="navigation">[[+wrapper]]</ul>`
-          &tpl=`@INLINE
-          <li class="page-footer__nav-item">
-            <a href="[[+uri]]" class="page-footer__nav-link">[[+menutitle]]</a>[[+wrapper]]
-          </li>
-          `
-          ]]*}
 
           <ul class="page-footer__nav" role="navigation">
             <li class="page-footer__nav-item">
               <a class="page-footer__nav-link" href="/">Главная</a>
             </li>
             <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="[[~[[11]]]]">Блог</a>
+              <a class="page-footer__nav-link" href="[[~11]]">Блог</a>
             </li>
             <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="[[~[[17]]]]">Сервис</a>
+              <a class="page-footer__nav-link" href="[[~7]]">Сервис</a>
             </li>
             <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="[[~[[13]]]]">Галерея</a>
+              <a class="page-footer__nav-link" href="[[~13]]">Галерея</a>
             </li>
             <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="[[~[[14]]]]">Контакты</a>
+              <a class="page-footer__nav-link" href="[[~14]]">Контакты</a>
             </li>
           </ul>
           <article class="socials">
             <a class="socials__link" href="[[++company_fb]]" rel="follow,index" target="_blank">
               <span class="socials__fb">
                 <svg width="25" height="25">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#facebook-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#facebook-ico"/>
                 </svg>
               </span>
             </a>
@@ -201,7 +194,7 @@
             <a href="viber://add?number=[[++company_viber]]" class="socials__link" title="Viber">
               <span class="socials__viber">
                 <svg width="25" height="25">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#viber-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#viber-ico"/>
                 </svg>
               </span>
             </a>
@@ -209,7 +202,7 @@
             <a href="tg://resolve?domain=[[++company_telegram]]" class="socials__link" title="Telegram">
               <span class="socials__telegram">
                 <svg width="25" height="25">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#telegram-ico"/>
+                  <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#telegram-ico"/>
                 </svg>
               </span>
             </a>
@@ -218,9 +211,9 @@
         </div>
         <div class="page-footer__bottom  copyrights">
           <span class="copyrights__owner"><span>©</span>&thinsp;[[++company_name]]</span>
-          <a class="copyrights__dev-link" href="http://it-doors.com/" rel="nofollow" target="_blank"><span>Разработка</span>
+          <a class="copyrights__dev-link" href="https://it-doors.com/" rel="nofollow" target="_blank"><span>Разработка</span>
             <svg width="75" height="27">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#it-doors-logo"/>
+              <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="assets/site/img/sprite-svg.svg#it-doors-logo"/>
             </svg>
           </a>
         </div>
@@ -231,5 +224,7 @@
 </div>
 
 <script src="assets/site/js/script.min.js"></script>
+
+{block "disqusCounter"} {/block}
 </body>
 </html>

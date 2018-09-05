@@ -50,7 +50,25 @@
   }
 
   &__img-wrapper {
+    width: 100%;
+    overflow: hidden;
 
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      height: 290px;
+      object-fit: cover;
+      object-position: center;
+
+      @media (min-width: $screen-md) {
+        height: 330px;
+      }
+
+      @media (min-width: $screen-xl) {
+        height: 380px;
+      }
+    }
   }
 
   &__slide-title {

@@ -148,10 +148,6 @@
     &--recapcha {
       display: flex;
       flex-direction: column;
-
-      img {
-        display: block;
-      }
     }
 
     &--submit {
@@ -176,7 +172,7 @@
       display: block;
       max-width: none;
       height: 470px;
-      object-fit: contain;
+      object-fit: cover;
       object-position: left;
 
       @media (min-width: $screen-xl) {
@@ -221,7 +217,7 @@
   color: $main-color;
 }
 
-input:focus + label,
+/* input:focus + label,
 textarea:focus + label {
   top: -9px;
-}
+} */
