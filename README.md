@@ -1,2 +1,4 @@
 # BFR-Autoservice
-## Markup and JS scripts
+Автосервис
+
+https://des-yogi.github.io/bfr-autoservice/
